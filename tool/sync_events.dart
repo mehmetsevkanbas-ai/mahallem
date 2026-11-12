@@ -326,7 +326,9 @@ Future<void> _pushToSupabase(
       Uri.parse('$url/rest/v1/rpc/upsert_synced_events'),
       headers: {
         'apikey': key,
-        'Authorization': 'Bearer $key',
+        // Eski service_role anahtarı JWT'dir ve Bearer olarak da gönderilir; yeni
+        // sb_secret_ anahtarları JWT değildir, yalnızca apikey başlığıyla gider.
+        if (key.startsWith('eyJ')) 'Authorization': 'Bearer $key',
         'Content-Type': 'application/json',
       },
       body: jsonEncode({'p_source': source, 'p_events': events}),
