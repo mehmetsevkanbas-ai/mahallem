@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Mahallem: Alanya'nın kültür haritası. Konserler, tiyatrolar, sergiler ve kurslar tek haritada.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Mahallem">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0E8C9B">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>Mahallem · Alanya Kültür Haritası</title>
+  <link rel="manifest" href="manifest.json">
+  <style>
+    html, body { margin: 0; height: 100%; background: #FCFAF7; }
+    @media (prefers-color-scheme: dark) { html, body { background: #0F1B24; } }
+    /* Flutter ilk kareyi çizene kadar görünen marka açılış ekranı */
+    #splash {
+      position: fixed; inset: 0; z-index: -1;
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+    #splash svg { width: 96px; height: 96px; animation: pulse 1.6s ease-in-out infinite; }
+    #splash .name { font-size: 26px; font-weight: 800; letter-spacing: -0.5px; color: #0F1B24; }
+    #splash .name span { color: #FF7A59; }
+    #splash .tag { font-size: 14px; color: #5B6B73; margin-top: -10px; }
+    @media (prefers-color-scheme: dark) {
+      #splash .name { color: #F2F5F7; }
+      #splash .tag { color: #9AA9B1; }
+    }
+    @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.06); } }
+  </style>
+</head>
+<body>
+  <div id="splash" aria-hidden="true">
+    <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="sbg" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#0A5E6B"/>
+          <stop offset="0.6" stop-color="#0E8C9B"/>
+          <stop offset="1" stop-color="#22B8A8"/>
+        </linearGradient>
+      </defs>
+      <rect width="1024" height="1024" rx="232" fill="url(#sbg)"/>
+      <path d="M512 884 C430 784 238 624 238 440 A274 274 0 1 1 786 440 C786 624 594 784 512 884 Z" fill="#FFFFFF"/>
+      <circle cx="512" cy="322" r="44" fill="#FF7A59"/>
+      <path d="M368 548 L440 412 L512 494 L584 412 L656 548" fill="none" stroke="#0E8C9B" stroke-width="60" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <div class="name">Mahalle<span>m</span></div>
+    <div class="tag">Alanya'nın kültür haritası</div>
+  </div>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

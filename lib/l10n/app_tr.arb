@@ -1,0 +1,267 @@
+{
+  "@@locale": "tr",
+  "appTitle": "Mahallem",
+  "appTagline": "Alanya'nın kültür haritası",
+  "navMap": "Harita",
+  "navEvents": "Keşfet",
+  "navAdd": "Ekle",
+  "navProfile": "Profil",
+  "searchHint": "Etkinlik, mekan veya kurs ara",
+  "filterAll": "Tümü",
+  "kindEvents": "Etkinlikler",
+  "kindCourses": "Kurslar",
+  "kindEvent": "Etkinlik",
+  "kindCourse": "Kurs",
+  "dateAny": "Her zaman",
+  "dateToday": "Bugün",
+  "dateThisWeek": "Bu hafta",
+  "dateWeekend": "Hafta sonu",
+  "dateThisMonth": "Bu ay",
+  "forYou": "Senin için",
+  "forYouSubtitle": "İlgi alanlarına göre seçtiklerimiz",
+  "upcomingEvents": "Yaklaşan etkinlikler",
+  "allEvents": "Tüm etkinlik ve kurslar",
+  "resultsCount": "{count, plural, =0{Sonuç yok} other{{count} sonuç}}",
+  "@resultsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "noResults": "Bu filtrelere uygun etkinlik bulunamadı.",
+  "clearFilters": "Filtreleri temizle",
+  "free": "Ücretsiz",
+  "ongoingCourse": "Devam eden kurs",
+  "todayAt": "Bugün {time}",
+  "@todayAt": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "tomorrowAt": "Yarın {time}",
+  "@tomorrowAt": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "untilDate": "{date} tarihine kadar",
+  "@untilDate": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "startsOn": "Başlangıç: {date}",
+  "@startsOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "seeDetails": "Detaylar",
+  "getDirections": "Yol tarifi al",
+  "location": "Konum",
+  "dateTime": "Tarih ve saat",
+  "schedule": "Program",
+  "price": "Ücret",
+  "organizer": "Düzenleyen",
+  "contact": "İletişim",
+  "about": "Hakkında",
+  "addToFavorites": "Favorilere ekle",
+  "removeFromFavorites": "Favorilerden çıkar",
+  "favorites": "Favorilerim",
+  "myEvents": "Eklediğim etkinlikler",
+  "statusPending": "Onay bekliyor",
+  "statusApproved": "Yayında",
+  "statusRejected": "Reddedildi",
+  "loginRequiredFavorite": "Favorilere eklemek için giriş yap",
+  "signIn": "Giriş yap",
+  "signUp": "Kayıt ol",
+  "signOut": "Çıkış yap",
+  "email": "E-posta",
+  "password": "Şifre",
+  "displayName": "Ad Soyad",
+  "forgotPassword": "Şifremi unuttum",
+  "resetEmailSent": "Şifre sıfırlama bağlantısı e-postana gönderildi.",
+  "confirmEmailSent": "Kayıt tamamlandı! Hesabını doğrulamak için e-postanı kontrol et, ardından giriş yap.",
+  "authWelcome": "Mahallem'e hoş geldin",
+  "authSubtitle": "Etkinlikleri kaydet, ilgi alanlarına göre öneriler al ve kendi etkinliğini ekle.",
+  "errorInvalidEmail": "Geçerli bir e-posta gir",
+  "errorPasswordShort": "Şifre en az 6 karakter olmalı",
+  "errorRequired": "Bu alan zorunlu",
+  "errorGeneric": "Bir hata oluştu: {message}",
+  "@errorGeneric": {
+    "placeholders": {
+      "message": {
+        "type": "String"
+      }
+    }
+  },
+  "retry": "Tekrar dene",
+  "interestsTitle": "Neler ilgini çekiyor?",
+  "interestsSubtitle": "Seçimlerine göre sana özel etkinlikler gösterelim.",
+  "interestsSave": "Kaydet ve devam et",
+  "interestsSkip": "Şimdilik geç",
+  "editInterests": "İlgi alanlarını düzenle",
+  "myInterests": "İlgi alanlarım",
+  "noInterests": "Henüz ilgi alanı seçmedin.",
+  "addEventTitle": "Etkinlik ekle",
+  "addEventSubtitle": "Konser, tiyatro, sahilde müzik, resim kursu... Şehrin kültür hayatına katkıda bulun.",
+  "fieldTitle": "Başlık",
+  "fieldDescription": "Açıklama",
+  "fieldCategory": "Kategori",
+  "fieldKind": "Tür",
+  "fieldStart": "Başlangıç",
+  "fieldEnd": "Bitiş (isteğe bağlı)",
+  "fieldSchedule": "Kurs programı",
+  "fieldScheduleHint": "Örn. Her Salı ve Perşembe 19:00-21:00",
+  "fieldVenue": "Mekan adı",
+  "fieldAddress": "Adres",
+  "fieldPrice": "Ücret",
+  "fieldPriceHint": "Örn. 250 ₺",
+  "fieldIsFree": "Ücretsiz",
+  "fieldOrganizer": "Düzenleyen",
+  "fieldContact": "İletişim (telefon, web, Instagram)",
+  "pickLocation": "Konum",
+  "pickLocationHint": "Etkinliğin yapılacağı yere haritada dokun",
+  "locationRequired": "Lütfen haritadan konum seç",
+  "startRequired": "Lütfen başlangıç tarihini seç",
+  "addImage": "Görsel ekle",
+  "changeImage": "Görseli değiştir",
+  "removeImage": "Görseli kaldır",
+  "submitEvent": "Onaya gönder",
+  "submitSuccessTitle": "Teşekkürler!",
+  "submitSuccessBody": "Etkinliğin yönetici onayından sonra haritada yayınlanacak.",
+  "ok": "Tamam",
+  "cancel": "Vazgeç",
+  "selectDate": "Tarih seç",
+  "adminPanel": "Yönetici paneli",
+  "adminPendingTitle": "Onay bekleyen etkinlikler",
+  "adminNoPending": "Onay bekleyen etkinlik yok.",
+  "approve": "Onayla",
+  "reject": "Reddet",
+  "eventApproved": "Etkinlik onaylandı",
+  "eventRejected": "Etkinlik reddedildi",
+  "delete": "Sil",
+  "language": "Dil",
+  "theme": "Tema",
+  "themeSystem": "Sistem",
+  "themeLight": "Açık",
+  "themeDark": "Koyu",
+  "guestTitle": "Hesabını oluştur",
+  "guestBody": "Favorilerini kaydetmek, kişisel öneriler almak ve etkinlik eklemek için giriş yap.",
+  "demoModeBanner": "Yerel mod: etkinlikler belediye sitelerinden alınan son veriyle gösteriliyor. Hesaplar ve eklenen etkinlikler yalnızca bu oturumda tutulur; kalıcı kayıt için Supabase bağlantısı gerekir.",
+  "demoAdminHint": "Yerel mod: e-postasında \"admin\" geçen hesaplar yönetici olur.",
+  "noFavorites": "Henüz favori etkinliğin yok.",
+  "noMyEvents": "Henüz etkinlik eklemedin.",
+  "eventNotFound": "Etkinlik bulunamadı.",
+  "recenterMap": "Alanya'ya dön",
+  "categories": "Kategoriler",
+  "viewOnMap": "Haritada göster",
+  "pendingCount": "{count} bekleyen",
+  "@pendingCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "settings": "Ayarlar",
+  "aboutApp": "Mahallem, Alanya'daki kültür ve sanat etkinliklerini tek bir haritada buluşturan bir TÜBİTAK projesidir.",
+  "catMusic": "Müzik",
+  "catTheatre": "Tiyatro",
+  "catArt": "Resim & Sanat",
+  "catDance": "Dans",
+  "catCinema": "Sinema",
+  "catLiterature": "Edebiyat",
+  "catFestival": "Festival",
+  "catOutdoor": "Açık hava",
+  "catWorkshop": "Atölye",
+  "creditsTitle": "Proje ekibi",
+  "creditsDeveloper": "Aperion Team tarafından geliştirilmiştir.",
+  "creditsSchool": "Hüseyin Girenes Fen Lisesi öğrencileri tarafından oluşturulan bir TÜBİTAK projesidir.",
+  "dataSourcesTitle": "Veri kaynakları",
+  "dataSourcesBody": "Etkinlikler ve kurslar Alanya Belediyesi, Antalya Büyükşehir Belediyesi (etkinlikler, ATABEM ve ATASEM kursları) ve Antalya Devlet Opera ve Balesi'nin resmi sitelerinden düzenli olarak otomatik alınır.",
+  "source": "Kaynak",
+  "openSource": "Kaynakta görüntüle",
+  "lastUpdated": "Son güncelleme: {date}",
+  "@lastUpdated": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "eventsHere": "Bu konumda {count} kayıt",
+  "@eventsHere": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "onboardingTitle": "Seni tanıyalım",
+  "onboardingSubtitle": "Birkaç kısa soruyla sana uygun etkinlik ve kursları önerelim.",
+  "stepOf": "{current}/{total}",
+  "@stepOf": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "qKinds": "Neye katılmak istersin?",
+  "kindsEventsDesc": "Konser, tiyatro, festival gibi tek seferlik etkinlikler",
+  "kindsCoursesDesc": "Düzenli devam eden kurs ve atölyeler",
+  "kindsBoth": "İkisi de",
+  "qTime": "Genelde ne zaman müsaitsin?",
+  "qTimeHint": "Birden fazla seçebilirsin.",
+  "timeWeekdayDay": "Hafta içi gündüz",
+  "timeWeekdayEvening": "Hafta içi akşam",
+  "timeWeekend": "Hafta sonu",
+  "qBudget": "Bütçe tercihin?",
+  "budgetFreeOnly": "Sadece ücretsiz",
+  "budgetAny": "Ücretli de olur",
+  "qCompany": "Kiminle katılırsın?",
+  "companyAdults": "Yalnız veya arkadaşlarla",
+  "companyKids": "Çocuğumla / ailemle",
+  "qArea": "Nerede yaşıyorsun?",
+  "qAreaHint": "Sana yakın olanları öne çıkarırız.",
+  "areaAny": "Fark etmez",
+  "next": "Devam",
+  "back": "Geri",
+  "finish": "Bitir",
+  "myPreferences": "Tercihlerim",
+  "editPreferences": "Düzenle",
+  "reasonInterest": "İlgi alanın: {category}",
+  "@reasonInterest": {
+    "placeholders": {
+      "category": {
+        "type": "String"
+      }
+    }
+  },
+  "reasonFavorites": "Favorilerine benzer",
+  "reasonNear": "Sana yakın · {km} km",
+  "@reasonNear": {
+    "placeholders": {
+      "km": {
+        "type": "String"
+      }
+    }
+  },
+  "reasonTime": "Müsait olduğun zaman",
+  "reasonKids": "Çocuklara uygun",
+  "reasonSoon": "Yakında",
+  "forYouEmpty": "Önerileri görmek için tercihlerini belirle."
+}

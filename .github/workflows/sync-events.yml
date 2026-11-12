@@ -1,0 +1,52 @@
+# Belediye sitelerindeki etkinlikleri 2 saatte bir Supabase'e aktarır.
+# Gerekli repo gizli değişkenleri (Settings > Secrets and variables > Actions):
+#   SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY
+name: Sync events
+
+on:
+  schedule:
+    - cron: "15 */2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-events
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: 3.44.0
+          cache: true
+
+      - run: flutter pub get
+
+      - name: Etkinlikleri senkronize et
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: |
+          if [ -n "$SUPABASE_URL" ]; then
+            dart run tool/sync_events.dart --supabase
+          else
+            dart run tool/sync_events.dart
+          fi
+
+      # Konum önbelleği büyüdüyse depoya geri yaz (Nominatim'e tekrar sorulmasın).
+      - name: Konum önbelleğini kaydet
+        run: |
+          if ! git diff --quiet -- tool/sync/geocode_cache.json; then
+            git config user.name "mahallem-bot"
+            git config user.email "mahallem-bot@users.noreply.github.com"
+            git add tool/sync/geocode_cache.json
+            git commit -m "Konum önbelleğini güncelle [skip ci]"
+            git push
+          fi

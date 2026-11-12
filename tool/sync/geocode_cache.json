@@ -1,0 +1,1922 @@
+{
+ "version": 2,
+ "entries": {
+  "1418 sokak molla yusuf mahallesi konyaalti antalya": [
+   {
+    "lat": "36.8928523",
+    "lon": "30.6260319",
+    "name": "1418. Sokak",
+    "category": "highway",
+    "type": "residential",
+    "addresstype": "residential",
+    "address": {
+     "road": "1418. Sokak",
+     "suburb": "Molla Yusuf Mahallesi",
+     "town": "Konyaaltı",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07070",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "152 sokak altindag mahallesi muratpasa antalya": [
+   {
+    "lat": "36.8927178",
+    "lon": "30.6925533",
+    "name": "150. Sokak",
+    "category": "highway",
+    "type": "residential",
+    "addresstype": "residential",
+    "address": {
+     "road": "150. Sokak",
+     "suburb": "Altındağ Mahallesi",
+     "city": "Antalya",
+     "town": "Muratpaşa",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07386",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "36.8923765",
+    "lon": "30.6916720",
+    "name": "151. Sokak",
+    "category": "highway",
+    "type": "residential",
+    "addresstype": "residential",
+    "address": {
+     "road": "151. Sokak",
+     "suburb": "Altındağ Mahallesi",
+     "city": "Antalya",
+     "town": "Muratpaşa",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07386",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "36.8924283",
+    "lon": "30.6906936",
+    "name": "154. Sokak",
+    "category": "highway",
+    "type": "residential",
+    "addresstype": "residential",
+    "address": {
+     "road": "154. Sokak",
+     "suburb": "Altındağ Mahallesi",
+     "city": "Antalya",
+     "town": "Muratpaşa",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07386",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "36.8920716",
+    "lon": "30.6934708",
+    "name": "156. Sokak",
+    "category": "highway",
+    "type": "residential",
+    "addresstype": "residential",
+    "address": {
+     "road": "156. Sokak",
+     "suburb": "Altındağ Mahallesi",
+     "city": "Antalya",
+     "town": "Muratpaşa",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07386",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "36.8932786",
+    "lon": "30.6927739",
+    "name": "149. Sokak",
+    "category": "highway",
+    "type": "residential",
+    "addresstype": "residential",
+    "address": {
+     "road": "149. Sokak",
+     "suburb": "Altındağ Mahallesi",
+     "city": "Antalya",
+     "town": "Muratpaşa",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07386",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "2428 sokak yeni mahallesi kepez antalya": [
+   {
+    "lat": "36.9203862",
+    "lon": "30.7098750",
+    "name": "2445. Sokak",
+    "category": "highway",
+    "type": "residential",
+    "addresstype": "residential",
+    "address": {
+     "road": "2445. Sokak",
+     "suburb": "Yeni Mahallesi",
+     "town": "Kepez",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07366",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "36.9226979",
+    "lon": "30.7093253",
+    "name": "2451. Sokak",
+    "category": "highway",
+    "type": "residential",
+    "addresstype": "residential",
+    "address": {
+     "road": "2451. Sokak",
+     "suburb": "Yeni Mahallesi",
+     "town": "Kepez",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07366",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "36.9213953",
+    "lon": "30.7095978",
+    "name": "2449. Sokak",
+    "category": "highway",
+    "type": "residential",
+    "addresstype": "residential",
+    "address": {
+     "road": "2449. Sokak",
+     "suburb": "Yeni Mahallesi",
+     "town": "Kepez",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07366",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "36.9193593",
+    "lon": "30.7101041",
+    "name": "2441. Sokak",
+    "category": "highway",
+    "type": "residential",
+    "addresstype": "residential",
+    "address": {
+     "road": "2441. Sokak",
+     "suburb": "Yeni Mahallesi",
+     "town": "Kepez",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07366",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "36.9232292",
+    "lon": "30.7094576",
+    "name": "2453. Sokak",
+    "category": "highway",
+    "type": "residential",
+    "addresstype": "residential",
+    "address": {
+     "road": "2453. Sokak",
+     "suburb": "Yeni Mahallesi",
+     "town": "Kepez",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07366",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "49 sokak kizilsaray mahallesi muratpasa antalya": [
+   {
+    "lat": "36.8926476",
+    "lon": "30.6998984",
+    "name": "92 Sokak",
+    "category": "highway",
+    "type": "residential",
+    "addresstype": "residential",
+    "address": {
+     "road": "92 Sokak",
+     "suburb": "Kızılsaray Mahallesi",
+     "city": "Antalya",
+     "town": "Muratpaşa",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07050",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "36.8946294",
+    "lon": "30.6981172",
+    "name": "92 Sokak",
+    "category": "highway",
+    "type": "residential",
+    "addresstype": "residential",
+    "address": {
+     "road": "92 Sokak",
+     "suburb": "Üçgen Mahallesi",
+     "city": "Antalya",
+     "town": "Muratpaşa",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07386",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "36.8894982",
+    "lon": "30.7027990",
+    "name": "14 Sokak",
+    "category": "highway",
+    "type": "residential",
+    "addresstype": "residential",
+    "address": {
+     "road": "14 Sokak",
+     "suburb": "Elmalı Mahallesi",
+     "city": "Antalya",
+     "town": "Muratpaşa",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07050",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "36.8908687",
+    "lon": "30.7008801",
+    "name": "81 Sokak",
+    "category": "highway",
+    "type": "residential",
+    "addresstype": "residential",
+    "address": {
+     "road": "81 Sokak",
+     "suburb": "Kızılsaray Mahallesi",
+     "city": "Antalya",
+     "town": "Muratpaşa",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07050",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "36.8918420",
+    "lon": "30.7018589",
+    "name": "61 Sokak",
+    "category": "highway",
+    "type": "residential",
+    "addresstype": "residential",
+    "address": {
+     "road": "61 Sokak",
+     "suburb": "Kızılsaray Mahallesi",
+     "city": "Antalya",
+     "town": "Muratpaşa",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07050",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "847 sokak kiremitli mahallesi korkuteli antalya": [
+   {
+    "lat": "37.0623652",
+    "lon": "30.1974762",
+    "name": "619. Sokak",
+    "category": "highway",
+    "type": "residential",
+    "addresstype": "residential",
+    "address": {
+     "road": "619. Sokak",
+     "suburb": "Karşıyaka",
+     "village": "İmrahor",
+     "town": "Korkuteli",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "37.0629726",
+    "lon": "30.1964565",
+    "name": "630. Sokak",
+    "category": "highway",
+    "type": "residential",
+    "addresstype": "residential",
+    "address": {
+     "road": "630. Sokak",
+     "suburb": "Karşıyaka",
+     "village": "İmrahor",
+     "town": "Korkuteli",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "37.0625773",
+    "lon": "30.1970095",
+    "name": "628. Sokak",
+    "category": "highway",
+    "type": "residential",
+    "addresstype": "residential",
+    "address": {
+     "road": "628. Sokak",
+     "suburb": "Karşıyaka",
+     "village": "İmrahor",
+     "town": "Korkuteli",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "37.0617080",
+    "lon": "30.1984443",
+    "name": "626. Sokak",
+    "category": "highway",
+    "type": "residential",
+    "addresstype": "residential",
+    "address": {
+     "road": "626. Sokak",
+     "suburb": "Karşıyaka",
+     "village": "İmrahor",
+     "town": "Korkuteli",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "abdullah kurnaz caddesi ozugur mahallesi gundogmus antalya": [],
+  "aksu antalya": [
+   {
+    "lat": "36.9475051",
+    "lon": "30.8477050",
+    "name": "Aksu",
+    "category": "boundary",
+    "type": "administrative",
+    "addresstype": "town",
+    "address": {
+     "town": "Aksu",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "aksu kurs merkezi aksu antalya": [],
+  "alanya antalya": [
+   {
+    "lat": "36.8865728",
+    "lon": "30.7030242",
+    "name": "Antalya",
+    "category": "place",
+    "type": "city",
+    "addresstype": "city",
+    "address": {
+     "city": "Antalya",
+     "town": "Muratpaşa",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07050",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "36.5436680",
+    "lon": "32.0019387",
+    "name": "Alanya",
+    "category": "boundary",
+    "type": "administrative",
+    "addresstype": "town",
+    "address": {
+     "town": "Alanya",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "alanya atabem kurs merkezi alanya antalya": [],
+  "allesi sarampol caddesi ucgen mahallesi muratpasa antalya": [],
+  "altindag el sanatlari kurs merkezi muratpasa antalya": [],
+  "altindag mahallesi muratpasa antalya": [
+   {
+    "lat": "36.8912382",
+    "lon": "30.6921871",
+    "name": "Altındağ Mahallesi",
+    "category": "boundary",
+    "type": "administrative",
+    "addresstype": "suburb",
+    "address": {
+     "suburb": "Altındağ Mahallesi",
+     "city": "Antalya",
+     "town": "Muratpaşa",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "altinova saime salih konca kurs merkezi kepez antalya": [],
+  "altonova sinan mahallesi kepez antalya": [],
+  "andifli mahallesi kas antalya": [
+   {
+    "lat": "36.2058447",
+    "lon": "29.6345495",
+    "name": "Andifli Mahallesi",
+    "category": "highway",
+    "type": "secondary",
+    "addresstype": "secondary",
+    "address": {
+     "road": "Andifli Mahallesi",
+     "town": "Kaş",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "08750",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "antalya muratpasa": [
+   {
+    "lat": "36.8865728",
+    "lon": "30.7030242",
+    "name": "Antalya",
+    "category": "place",
+    "type": "city",
+    "addresstype": "city",
+    "address": {
+     "city": "Antalya",
+     "town": "Muratpaşa",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07050",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "36.8888637",
+    "lon": "30.7208911",
+    "name": "Muratpaşa",
+    "category": "boundary",
+    "type": "administrative",
+    "addresstype": "town",
+    "address": {
+     "town": "Muratpaşa",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "asagi mahallesi ibradi antalya": [],
+  "atabem finike kurs merkezi finike antalya": [],
+  "atabem gazipasa kurs merkezi gazipasa antalya": [],
+  "atabem ibradi kurs merkezi ibradi antalya": [],
+  "atabem korkuteli kurs merkezi korkuteli antalya": [],
+  "atabem manavgat turk beleni kurs merkezi manavgat antalya": [],
+  "atabem meltem kurs merkezi muratpasa antalya": [],
+  "atabem yeni mahalle kultur merkezi kurs merkezi kepez antalya": [],
+  "atabem yesilbayir kurs merkezi dosemealti antalya": [],
+  "atasem aksu kurs merkezi aksu antalya": [],
+  "atasem alanya kurs merkezi alanya antalya": [],
+  "atasem altindag el sanatlari kurs merkezi muratpasa antalya": [],
+  "atasem altinova saime salih konca kurs merkezi kepez antalya": [],
+  "atasem ataturk kurs merkezi muratpasa antalya": [],
+  "atasem demre kurs merkezi demre antalya": [],
+  "atasem dosemealti kurs merkezi dosemealti antalya": [],
+  "atasem dosemealti yesilbayir kurs merkezi dosemealti antalya": [],
+  "atasem elmali kurs merkezi elmali antalya": [],
+  "atasem finike kurs merkezi finike antalya": [],
+  "atasem gundogmus kurs merkezi gundogmus antalya": [],
+  "atasem ibradi kurs merkezi ibradi antalya": [],
+  "atasem kalkan kurs merkezi kas antalya": [],
+  "atasem kas kurs merkezi kas antalya": [],
+  "atasem kepez kurs merkezi kepez antalya": [],
+  "atasem konuksever kurs merkezi muratpasa antalya": [],
+  "atasem korkuteli kurs merkezi korkuteli antalya": [],
+  "atasem kumluca kurs merkezi kumluca antalya": [],
+  "atasem lara kurs merkezi muratpasa antalya": [],
+  "atasem manavgat turk beleni kurs merkezi manavgat antalya": [],
+  "atasem meltem kurs merkezi muratpasa antalya": [],
+  "atasem serik kurs merkezi serik antalya": [],
+  "atasem ucgen kurs merkezi muratpasa antalya": [],
+  "atasem uncali kurs merkezi konyaalti antalya": [],
+  "ataturk caddesi istiklal mahallesi gazipasa antalya": [
+   {
+    "lat": "36.2720158",
+    "lon": "32.3343648",
+    "name": "Atatürk Caddesi",
+    "category": "highway",
+    "type": "tertiary",
+    "addresstype": "tertiary",
+    "address": {
+     "road": "Atatürk Caddesi",
+     "suburb": "Yeni Mahallesi",
+     "village": "Korubaşı",
+     "town": "Gazipaşa",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07900",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "ataturk caddesi sekerhane mahallesi alanya antalya": [
+   {
+    "lat": "36.5480021",
+    "lon": "32.0066036",
+    "name": "Atatürk İÖO - Güllerpınarı",
+    "category": "highway",
+    "type": "bus_stop",
+    "addresstype": "highway",
+    "address": {
+     "highway": "Atatürk İÖO - Güllerpınarı",
+     "road": "Hacet Caddesi",
+     "suburb": "Güller Pınarı Mahallesi",
+     "town": "Alanya",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "74000",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "ataturk caddesi yenikoy mahallesi dosemealti antalya": [
+   {
+    "lat": "37.0388330",
+    "lon": "30.5993200",
+    "name": "YENİKÖY ATATÜRK CD-44",
+    "category": "highway",
+    "type": "bus_stop",
+    "addresstype": "highway",
+    "address": {
+     "highway": "YENİKÖY ATATÜRK CD-44",
+     "road": "İnönü Caddesi",
+     "suburb": "Yeniköy",
+     "town": "Döşemealtı",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07190",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "37.0544252",
+    "lon": "30.5964750",
+    "name": "YENİKÖY ATATÜRK CD-38",
+    "category": "highway",
+    "type": "bus_stop",
+    "addresstype": "highway",
+    "address": {
+     "highway": "YENİKÖY ATATÜRK CD-38",
+     "road": "İnönü Caddesi",
+     "suburb": "Yeniköy",
+     "town": "Döşemealtı",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07190",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "37.0580150",
+    "lon": "30.5956760",
+    "name": "YENİKÖY ATATÜRK CD-37",
+    "category": "highway",
+    "type": "bus_stop",
+    "addresstype": "highway",
+    "address": {
+     "highway": "YENİKÖY ATATÜRK CD-37",
+     "road": "İnönü Caddesi",
+     "suburb": "Yeniköy",
+     "town": "Döşemealtı",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07190",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "37.0369673",
+    "lon": "30.5995417",
+    "name": "YENİKÖY ATATÜRK CD-45",
+    "category": "highway",
+    "type": "bus_stop",
+    "addresstype": "highway",
+    "address": {
+     "highway": "YENİKÖY ATATÜRK CD-45",
+     "road": "İnönü Caddesi",
+     "suburb": "Yeniköy",
+     "town": "Döşemealtı",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07190",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "ataturk caddesi yesilbayir mahallesi dosemealti antalya": [],
+  "ataturk kurs merkezi muratpasa antalya": [],
+  "avsallar mahallesi alanya antalya": [
+   {
+    "lat": "36.6211782",
+    "lon": "31.7772641",
+    "name": "Avsallar Mahallesi Kapalı Pazar Alanı",
+    "category": "amenity",
+    "type": "marketplace",
+    "addresstype": "amenity",
+    "address": {
+     "amenity": "Avsallar Mahallesi Kapalı Pazar Alanı",
+     "road": "Konak Cd",
+     "suburb": "Avsallar",
+     "town": "Alanya",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07407",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "bulent ecevit bulvari fener mahallesi muratpasa antalya": [
+   {
+    "lat": "36.8576635",
+    "lon": "30.7636919",
+    "name": "Bülent Ecevit Bulvarı",
+    "category": "highway",
+    "type": "primary",
+    "addresstype": "primary",
+    "address": {
+     "road": "Bülent Ecevit Bulvarı",
+     "suburb": "Çağlayan Mahallesi",
+     "city": "Antalya",
+     "town": "Muratpaşa",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07160",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "calkaya mahallesi aksu antalya": [
+   {
+    "lat": "36.9238222",
+    "lon": "30.8713728",
+    "name": "Çalkaya Mahallesi",
+    "category": "boundary",
+    "type": "administrative",
+    "addresstype": "city_district",
+    "address": {
+     "city_district": "Çalkaya Mahallesi",
+     "town": "Aksu",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "cemal tan caddesi asagi mahallesi ibradi antalya": [],
+  "cikcilli mahallesi alanya antalya": [
+   {
+    "lat": "36.5475857",
+    "lon": "32.0287295",
+    "name": "Cikcilli Mahallesi",
+    "category": "boundary",
+    "type": "administrative",
+    "addresstype": "suburb",
+    "address": {
+     "suburb": "Cikcilli Mahallesi",
+     "town": "Alanya",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "cumhuriyet caddesi kokez mahallesi serik antalya": [
+   {
+    "lat": "36.9426698",
+    "lon": "31.1083000",
+    "name": "Cumhuriyet Caddesi",
+    "category": "highway",
+    "type": "tertiary",
+    "addresstype": "tertiary",
+    "address": {
+     "road": "Cumhuriyet Caddesi",
+     "suburb": "Belpınar Mahallesi",
+     "city_district": "Kökez Mahallesi",
+     "town": "Serik",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "36.9342009",
+    "lon": "31.1068508",
+    "name": "Cumhuriyet Caddesi",
+    "category": "highway",
+    "type": "tertiary",
+    "addresstype": "tertiary",
+    "address": {
+     "road": "Cumhuriyet Caddesi",
+     "suburb": "Kökez",
+     "city_district": "Kökez Mahallesi",
+     "town": "Serik",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "36.8647049",
+    "lon": "31.0617624",
+    "name": "Cumhuriyet Caddesi",
+    "category": "highway",
+    "type": "tertiary",
+    "addresstype": "tertiary",
+    "address": {
+     "road": "Cumhuriyet Caddesi",
+     "suburb": "Belek Mahallesi",
+     "town": "Serik",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07506",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "36.8655443",
+    "lon": "31.0523769",
+    "name": "Cumhuriyet Caddesi",
+    "category": "highway",
+    "type": "tertiary",
+    "addresstype": "tertiary",
+    "address": {
+     "road": "Cumhuriyet Caddesi",
+     "suburb": "Belek Mahallesi",
+     "town": "Serik",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07500",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "demre antalya": [
+   {
+    "lat": "36.2445690",
+    "lon": "29.9876151",
+    "name": "Demre",
+    "category": "boundary",
+    "type": "administrative",
+    "addresstype": "town",
+    "address": {
+     "town": "Demre",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "demre kurs merkezi demre antalya": [],
+  "dosemealti antalya": [
+   {
+    "lat": "37.0229560",
+    "lon": "30.6013333",
+    "name": "Döşemealtı",
+    "category": "boundary",
+    "type": "administrative",
+    "addresstype": "town",
+    "address": {
+     "town": "Döşemealtı",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "dosemealti kurs merkezi dosemealti antalya": [],
+  "dosemealti yesilbayir kurs merkezi dosemealti antalya": [],
+  "dumlupinar bulvari meltem mahallesi muratpasa antalya": [
+   {
+    "lat": "36.8924709",
+    "lon": "30.6647731",
+    "name": "Dumlupınar Bulvarı",
+    "category": "highway",
+    "type": "primary",
+    "addresstype": "primary",
+    "address": {
+     "road": "Dumlupınar Bulvarı",
+     "suburb": "Meltem Mahallesi",
+     "city": "Antalya",
+     "town": "Muratpaşa",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07090",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "36.8795622",
+    "lon": "30.6618080",
+    "name": "Dumlupınar Bulvarı",
+    "category": "highway",
+    "type": "secondary",
+    "addresstype": "secondary",
+    "address": {
+     "road": "Dumlupınar Bulvarı",
+     "suburb": "Meltem Mahallesi",
+     "city": "Antalya",
+     "town": "Muratpaşa",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07070",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "elmali antalya": [
+   {
+    "lat": "36.7383786",
+    "lon": "29.9183623",
+    "name": "Elmalı",
+    "category": "boundary",
+    "type": "administrative",
+    "addresstype": "town",
+    "address": {
+     "town": "Elmalı",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07700",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "36.8879916",
+    "lon": "30.7032663",
+    "name": "Elmalı Mahallesi",
+    "category": "boundary",
+    "type": "administrative",
+    "addresstype": "suburb",
+    "address": {
+     "suburb": "Elmalı Mahallesi",
+     "city": "Antalya",
+     "town": "Muratpaşa",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "elmali kurs merkezi elmali antalya": [],
+  "emek mahallesi kepez antalya": [
+   {
+    "lat": "36.9164521",
+    "lon": "30.7124794",
+    "name": "Emek Mahallesi",
+    "category": "boundary",
+    "type": "administrative",
+    "addresstype": "suburb",
+    "address": {
+     "suburb": "Emek Mahallesi",
+     "town": "Kepez",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "eski antalya caddesi andifli mahallesi kas antalya": [],
+  "eski mahallesi finike antalya": [
+   {
+    "lat": "36.2935073",
+    "lon": "30.1441331",
+    "name": "FİNİKE ESKİ GÜMRÜK CD-2",
+    "category": "highway",
+    "type": "bus_stop",
+    "addresstype": "highway",
+    "address": {
+     "highway": "FİNİKE ESKİ GÜMRÜK CD-2",
+     "road": "203 Sokak",
+     "suburb": "Kale",
+     "town": "Finike",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07750",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "fakilar sokak sekerhane mahallesi alanya antalya": [
+   {
+    "lat": "36.5454246",
+    "lon": "31.9992665",
+    "name": "Fakilar Sokak",
+    "category": "highway",
+    "type": "residential",
+    "addresstype": "residential",
+    "address": {
+     "road": "Fakilar Sokak",
+     "suburb": "Şekerhane Mahallesi",
+     "town": "Alanya",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "74000",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "fener mahallesi muratpasa antalya": [
+   {
+    "lat": "36.8534226",
+    "lon": "30.7557296",
+    "name": "Fener Mahallesi",
+    "category": "boundary",
+    "type": "administrative",
+    "addresstype": "suburb",
+    "address": {
+     "suburb": "Fener Mahallesi",
+     "city": "Antalya",
+     "town": "Muratpaşa",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07160",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "finike antalya": [
+   {
+    "lat": "36.3046148",
+    "lon": "30.1445334",
+    "name": "Finike",
+    "category": "boundary",
+    "type": "administrative",
+    "addresstype": "town",
+    "address": {
+     "town": "Finike",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "finike kurs merkezi finike antalya": [],
+  "gazipasa antalya": [
+   {
+    "lat": "36.2682712",
+    "lon": "32.3175066",
+    "name": "Gazipaşa",
+    "category": "boundary",
+    "type": "administrative",
+    "addresstype": "town",
+    "address": {
+     "town": "Gazipaşa",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07900",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "gazipasa kurs merkezi gazipasa antalya": [],
+  "gokyazi mahallesi demre antalya": [],
+  "gundogan mahallesi elmali antalya": [
+   {
+    "lat": "36.7405607",
+    "lon": "29.9204600",
+    "name": "Gündoğan",
+    "category": "place",
+    "type": "suburb",
+    "addresstype": "suburb",
+    "address": {
+     "suburb": "Gündoğan",
+     "town": "Elmalı",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07700",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "gundogmus antalya": [
+   {
+    "lat": "36.8143380",
+    "lon": "31.9983333",
+    "name": "Gündoğmuş",
+    "category": "boundary",
+    "type": "administrative",
+    "addresstype": "town",
+    "address": {
+     "town": "Gündoğmuş",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "gundogmus kurs merkezi gundogmus antalya": [],
+  "ibradi antalya": [
+   {
+    "lat": "37.0969444",
+    "lon": "31.5969351",
+    "name": "İbradı",
+    "category": "boundary",
+    "type": "administrative",
+    "addresstype": "town",
+    "address": {
+     "town": "İbradı",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "ibradi kurs merkezi ibradi antalya": [],
+  "istiklal caddesi aktoprak mahallesi kepez antalya": [
+   {
+    "lat": "36.9798783",
+    "lon": "30.7135177",
+    "name": "İstiklal Caddesi",
+    "category": "highway",
+    "type": "tertiary",
+    "addresstype": "tertiary",
+    "address": {
+     "road": "İstiklal Caddesi",
+     "suburb": "Aktoprak Mahallesi",
+     "town": "Kepez",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07210",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "36.9858032",
+    "lon": "30.7136869",
+    "name": "İstiklal Caddesi",
+    "category": "highway",
+    "type": "tertiary",
+    "addresstype": "tertiary",
+    "address": {
+     "road": "İstiklal Caddesi",
+     "suburb": "Aktoprak Mahallesi",
+     "town": "Kepez",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07020",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "istiklal mahallesi gazipasa antalya": [
+   {
+    "lat": "36.2776331",
+    "lon": "32.3189553",
+    "name": "Istiklal Mahallesi",
+    "category": "boundary",
+    "type": "administrative",
+    "addresstype": "suburb",
+    "address": {
+     "suburb": "Istiklal Mahallesi",
+     "village": "Beyobası",
+     "town": "Gazipaşa",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "kalkan kurs merkezi kas antalya": [],
+  "kalkan mahallesi kas antalya": [
+   {
+    "lat": "36.2729629",
+    "lon": "29.4120448",
+    "name": "Villam Antalya",
+    "category": "shop",
+    "type": "travel_agency",
+    "addresstype": "shop",
+    "address": {
+     "shop": "Villam Antalya",
+     "house_number": "1/4",
+     "road": "07-53",
+     "neighbourhood": "mahalle",
+     "village": "Kalkan",
+     "town": "Kaş",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07960",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "kargicak mahallesi alanya antalya": [],
+  "kas antalya": [
+   {
+    "lat": "36.1993752",
+    "lon": "29.6413365",
+    "name": "Kaş",
+    "category": "boundary",
+    "type": "administrative",
+    "addresstype": "town",
+    "address": {
+     "town": "Kaş",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "36.3098851",
+    "lon": "29.7352710",
+    "name": "Kasaba",
+    "category": "place",
+    "type": "village",
+    "addresstype": "village",
+    "address": {
+     "village": "Kasaba",
+     "town": "Kaş",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "kas kurs merkezi kas antalya": [],
+  "kemer antalya": [
+   {
+    "lat": "36.6013823",
+    "lon": "30.5638561",
+    "name": "Kemer",
+    "category": "boundary",
+    "type": "administrative",
+    "addresstype": "town",
+    "address": {
+     "town": "Kemer",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "36.3585850",
+    "lon": "29.7136880",
+    "name": "Kemer",
+    "category": "place",
+    "type": "village",
+    "addresstype": "village",
+    "address": {
+     "village": "Kemer",
+     "town": "Kaş",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "kepez antalya": [
+   {
+    "lat": "36.9176296",
+    "lon": "30.7149914",
+    "name": "Kepez",
+    "category": "boundary",
+    "type": "administrative",
+    "addresstype": "town",
+    "address": {
+     "town": "Kepez",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "36.9227084",
+    "lon": "31.6166108",
+    "name": "Kepez",
+    "category": "place",
+    "type": "village",
+    "addresstype": "village",
+    "address": {
+     "village": "Kepez",
+     "town": "Akseki",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "36.9342056",
+    "lon": "30.6414988",
+    "name": "Kepez Mahallesi",
+    "category": "boundary",
+    "type": "administrative",
+    "addresstype": "suburb",
+    "address": {
+     "suburb": "Kepez Mahallesi",
+     "town": "Kepez",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "kepez kurs merkezi kepez antalya": [],
+  "kestel mahallesi alanya antalya": [],
+  "kiremitli mahallesi korkuteli antalya": [
+   {
+    "lat": "37.0593384",
+    "lon": "30.2035532",
+    "name": "Eski Antalya Caddesi",
+    "category": "highway",
+    "type": "secondary",
+    "addresstype": "secondary",
+    "address": {
+     "road": "Eski Antalya Caddesi",
+     "suburb": "Yeni",
+     "village": "İmrahor",
+     "town": "Korkuteli",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "kizilsaray mahallesi muratpasa antalya": [
+   {
+    "lat": "36.8910227",
+    "lon": "30.6996559",
+    "name": "Kızılsaray Mahallesi",
+    "category": "boundary",
+    "type": "administrative",
+    "addresstype": "suburb",
+    "address": {
+     "suburb": "Kızılsaray Mahallesi",
+     "city": "Antalya",
+     "town": "Muratpaşa",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "konakli mahallesi alanya antalya": [
+   {
+    "lat": "36.5455675",
+    "lon": "31.9978058",
+    "name": "Cuma Pazarı (Konaklı,Manavgat)",
+    "category": "highway",
+    "type": "bus_stop",
+    "addresstype": "highway",
+    "address": {
+     "highway": "Cuma Pazarı (Konaklı,Manavgat)",
+     "road": "1116. Sokak",
+     "suburb": "Şekerhane Mahallesi",
+     "town": "Alanya",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "74000",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "konuksever emrah caddesi muratpasa antalya": [],
+  "konuksever kurs merkezi muratpasa antalya": [],
+  "konyaalti antalya": [
+   {
+    "lat": "36.8726128",
+    "lon": "30.6503649",
+    "name": "Konyaaltı",
+    "category": "boundary",
+    "type": "administrative",
+    "addresstype": "town",
+    "address": {
+     "town": "Konyaaltı",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "korkuteli antalya": [
+   {
+    "lat": "37.0666523",
+    "lon": "30.1970497",
+    "name": "Korkuteli",
+    "category": "boundary",
+    "type": "administrative",
+    "addresstype": "town",
+    "address": {
+     "town": "Korkuteli",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "korkuteli kurs merkezi korkuteli antalya": [],
+  "kumluca antalya": [
+   {
+    "lat": "36.3669046",
+    "lon": "30.2858418",
+    "name": "Kumluca",
+    "category": "boundary",
+    "type": "administrative",
+    "addresstype": "town",
+    "address": {
+     "town": "Kumluca",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "kumluca kurs merkezi kumluca antalya": [],
+  "kumluca mehmet akif ersoy kultur merkezi kumluca antalya": [],
+  "lara kurs merkezi muratpasa antalya": [],
+  "mahmutlar mahallesi alanya antalya": [
+   {
+    "lat": "36.5470022",
+    "lon": "32.0010799",
+    "name": "Bus nach Mahmutlar",
+    "category": "highway",
+    "type": "bus_stop",
+    "addresstype": "highway",
+    "address": {
+     "highway": "Bus nach Mahmutlar",
+     "road": "Şevket Tokuş Caddesi",
+     "suburb": "Şekerhane Mahallesi",
+     "town": "Alanya",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "74000",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "36.5435758",
+    "lon": "32.0030365",
+    "name": "1, 22 автобусы в Махмутлар",
+    "category": "highway",
+    "type": "bus_stop",
+    "addresstype": "highway",
+    "address": {
+     "highway": "1, 22 автобусы в Махмутлар",
+     "road": "Ahmet Tokuş Bulvarı",
+     "suburb": "Güller Pınarı Mahallesi",
+     "town": "Alanya",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "74000",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "manavgat antalya": [
+   {
+    "lat": "36.7870124",
+    "lon": "31.4406667",
+    "name": "Manavgat",
+    "category": "boundary",
+    "type": "administrative",
+    "addresstype": "town",
+    "address": {
+     "town": "Manavgat",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "36.9567305",
+    "lon": "31.5866310",
+    "name": "Manavgat Nehri",
+    "category": "waterway",
+    "type": "river",
+    "addresstype": "river",
+    "address": {
+     "river": "Manavgat Nehri",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "manavgat turk beleni kurs merkezi manavgat antalya": [],
+  "meltem kurs merkezi muratpasa antalya": [],
+  "mimar sinan caddesi yeni mahallesi kumluca antalya": [
+   {
+    "lat": "36.3641026",
+    "lon": "30.2840318",
+    "name": "Mimar Sinan Caddesi",
+    "category": "highway",
+    "type": "residential",
+    "addresstype": "residential",
+    "address": {
+     "road": "Mimar Sinan Caddesi",
+     "neighbourhood": "Yeni Mahallesi",
+     "town": "Kumluca",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "muratpasa antalya": [
+   {
+    "lat": "36.8865728",
+    "lon": "30.7030242",
+    "name": "Antalya",
+    "category": "place",
+    "type": "city",
+    "addresstype": "city",
+    "address": {
+     "city": "Antalya",
+     "town": "Muratpaşa",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07050",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "36.8888637",
+    "lon": "30.7208911",
+    "name": "Muratpaşa",
+    "category": "boundary",
+    "type": "administrative",
+    "addresstype": "town",
+    "address": {
+     "town": "Muratpaşa",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "mustafa masatli caddesi gokyazi mahallesi demre antalya": [],
+  "oba mahallesi alanya antalya": [
+   {
+    "lat": "36.5362885",
+    "lon": "32.0436447",
+    "name": "Oba Mahallesi",
+    "category": "boundary",
+    "type": "administrative",
+    "addresstype": "village",
+    "address": {
+     "village": "Oba Mahallesi",
+     "town": "Alanya",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "ozugur mahallesi gundogmus antalya": [
+   {
+    "lat": "36.8104272",
+    "lon": "31.9990969",
+    "name": "Özügür",
+    "category": "place",
+    "type": "suburb",
+    "addresstype": "suburb",
+    "address": {
+     "suburb": "Özügür",
+     "town": "Gündoğmuş",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "sakarya bulvari emek mahallesi kepez antalya": [
+   {
+    "lat": "36.9187259",
+    "lon": "30.7044228",
+    "name": "Sakarya Bulvarı",
+    "category": "highway",
+    "type": "primary",
+    "addresstype": "primary",
+    "address": {
+     "road": "Sakarya Bulvarı",
+     "suburb": "Karşıyaka Mahallesi",
+     "town": "Kepez",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07366",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "saray mahallesi alanya antalya": [
+   {
+    "lat": "36.5458403",
+    "lon": "31.9905885",
+    "name": "Saray Mahallesi",
+    "category": "boundary",
+    "type": "administrative",
+    "addresstype": "suburb",
+    "address": {
+     "suburb": "Saray Mahallesi",
+     "town": "Alanya",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07400",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "sehitler caddesi kalkan mahallesi kas antalya": [],
+  "sekerhane mahallesi alanya antalya": [
+   {
+    "lat": "36.5436063",
+    "lon": "31.9989173",
+    "name": "Şekerhane Mahallesi",
+    "category": "boundary",
+    "type": "administrative",
+    "addresstype": "suburb",
+    "address": {
+     "suburb": "Şekerhane Mahallesi",
+     "town": "Alanya",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "selale caddesi altonova sinan mahallesi kepez antalya": [],
+  "serik antalya": [
+   {
+    "lat": "36.9168682",
+    "lon": "31.1047478",
+    "name": "Serik",
+    "category": "boundary",
+    "type": "administrative",
+    "addresstype": "town",
+    "address": {
+     "town": "Serik",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "serik kurs merkezi serik antalya": [],
+  "serik yolu caddesi calkaya mahallesi aksu antalya": [],
+  "tosmur mahallesi alanya antalya": [
+   {
+    "lat": "36.5278975",
+    "lon": "32.0509451",
+    "name": "Tosmur Mahallesi",
+    "category": "boundary",
+    "type": "administrative",
+    "addresstype": "village",
+    "address": {
+     "village": "Tosmur Mahallesi",
+     "town": "Alanya",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "turkler mahallesi alanya antalya": [],
+  "ucgen kurs merkezi muratpasa antalya": [],
+  "ucgen mahallesi muratpasa antalya": [
+   {
+    "lat": "36.8958317",
+    "lon": "30.6956122",
+    "name": "Üçgen Mahallesi",
+    "category": "boundary",
+    "type": "administrative",
+    "addresstype": "suburb",
+    "address": {
+     "suburb": "Üçgen Mahallesi",
+     "city": "Antalya",
+     "town": "Muratpaşa",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "uncali kurs merkezi konyaalti antalya": [],
+  "varsak atabem kurs merkezi kepez antalya": [],
+  "yayla bulvari eski mahallesi finike antalya": [],
+  "yeni mahalle kultur merkezi kurs merkezi kepez antalya": [],
+  "yeni mahallesi kepez antalya": [
+   {
+    "lat": "36.9220659",
+    "lon": "30.7092289",
+    "name": "Yeni Mahallesi",
+    "category": "boundary",
+    "type": "administrative",
+    "addresstype": "suburb",
+    "address": {
+     "suburb": "Yeni Mahallesi",
+     "town": "Kepez",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "yenikoy mahallesi dosemealti antalya": [
+   {
+    "lat": "37.0090806",
+    "lon": "30.6274719",
+    "name": "SHARZ Yeniköy Döşemealtı Petrol",
+    "category": "amenity",
+    "type": "charging_station",
+    "addresstype": "amenity",
+    "address": {
+     "amenity": "SHARZ Yeniköy Döşemealtı Petrol",
+     "road": "Antalya - Burdur Yolu",
+     "suburb": "Çıplaklı",
+     "town": "Döşemealtı",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07040",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "37.0388330",
+    "lon": "30.5993200",
+    "name": "YENİKÖY ATATÜRK CD-44",
+    "category": "highway",
+    "type": "bus_stop",
+    "addresstype": "highway",
+    "address": {
+     "highway": "YENİKÖY ATATÜRK CD-44",
+     "road": "İnönü Caddesi",
+     "suburb": "Yeniköy",
+     "town": "Döşemealtı",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07190",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "37.0580150",
+    "lon": "30.5956760",
+    "name": "YENİKÖY ATATÜRK CD-37",
+    "category": "highway",
+    "type": "bus_stop",
+    "addresstype": "highway",
+    "address": {
+     "highway": "YENİKÖY ATATÜRK CD-37",
+     "road": "İnönü Caddesi",
+     "suburb": "Yeniköy",
+     "town": "Döşemealtı",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07190",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "37.0504433",
+    "lon": "30.5973228",
+    "name": "YENİKÖY ATATÜRK CD-40",
+    "category": "highway",
+    "type": "bus_stop",
+    "addresstype": "highway",
+    "address": {
+     "highway": "YENİKÖY ATATÜRK CD-40",
+     "road": "İnönü Caddesi",
+     "suburb": "Çıplaklı",
+     "town": "Döşemealtı",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07190",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "37.0523531",
+    "lon": "30.5969168",
+    "name": "YENİKÖY ATATÜRK CD-39",
+    "category": "highway",
+    "type": "bus_stop",
+    "addresstype": "highway",
+    "address": {
+     "highway": "YENİKÖY ATATÜRK CD-39",
+     "road": "İnönü Caddesi",
+     "suburb": "Çıplaklı",
+     "town": "Döşemealtı",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07190",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "yesilbayir kurs merkezi dosemealti antalya": [],
+  "yesilbayir mahallesi dosemealti antalya": []
+ }
+}

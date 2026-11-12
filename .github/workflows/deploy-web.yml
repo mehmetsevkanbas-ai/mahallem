@@ -1,0 +1,67 @@
+# Web sürümünü GitHub Pages'e yayınlar.
+# Gerekli repo ayarları:
+#   Settings > Pages > Source: "GitHub Actions"
+#   Settings > Secrets and variables > Actions:
+#     SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY  (boş bırakılırsa yerel modda yayınlanır)
+# Yerel modda etkinlikler, derleme sırasında belediye sitelerinden alınan
+# güncel veri dosyasından okunur; bu yüzden site her gün yeniden derlenir.
+name: Deploy web
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "30 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: 3.44.0
+          cache: true
+
+      - run: flutter pub get
+      - run: flutter analyze
+      - run: flutter test
+
+      - name: Belediye verisini güncelle
+        run: dart run tool/sync_events.dart || echo "Senkronizasyon başarısız, mevcut veri dosyası kullanılacak"
+
+      - name: Build web
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_PUBLISHABLE_KEY: ${{ secrets.SUPABASE_PUBLISHABLE_KEY }}
+        run: |
+          flutter build web --release \
+            --base-href "/${{ github.event.repository.name }}/" \
+            --dart-define=SUPABASE_URL="$SUPABASE_URL" \
+            --dart-define=SUPABASE_PUBLISHABLE_KEY="$SUPABASE_PUBLISHABLE_KEY"
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: build/web
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
