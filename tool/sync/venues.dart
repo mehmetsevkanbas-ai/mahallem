@@ -78,7 +78,10 @@ const knownVenues = <Venue>[
 
   // --- Gazipaşa -------------------------------------------------------------
   // OSM: Gazipaşa Kültür Merkezi (amenity=community_centre)
-  Venue('Gazipaşa Kültür Merkezi', 'Gazipaşa', 36.26438, 32.31456, ['gazipasa kultur merkezi']),
+  Venue('Gazipaşa Kültür Merkezi', 'Gazipaşa', 36.26438, 32.31456, [
+    'gazipasa kultur merkezi', 'gazipasa belediye kultur', 'gazipasa belediyesi kultur',
+    'gazipasa belediyesi gazipasa kultur',
+  ]),
 
   // --- Antalya merkez -------------------------------------------------------
   // OSM w469035184 — Evliya Çelebi Cd.; Antalya DOB ve Devlet Tiyatrosu sahnesi
@@ -97,6 +100,28 @@ const knownVenues = <Venue>[
   Venue('Doğu Garajı Kültür Merkezi', 'Muratpaşa', 36.88815, 30.71275, ['dogu garaji']),
   // Antalya kent merkezi meydanı
   Venue('Cumhuriyet Meydanı', 'Muratpaşa', 36.88688, 30.70302, ['cumhuriyet meydani']),
+  // OSM w428388151 (amenity=townhall) — Kültür Salonu, Beyaz Salon ve fuaye
+  // alanı Muratpaşa Belediyesi hizmet binasındadır (Güzeloba).
+  Venue('Muratpaşa Belediyesi Kültür Salonu', 'Muratpaşa', 36.85222, 30.75984, [
+    'muratpasa belediyesi kultur', 'muratpasa kultur salonu', 'muratpasa belediyesi beyaz',
+    'muratpasa belediyesi fuaye', 'muratpasa belediyesi konferans', 'muratpasa belediyesi hizmet binasi',
+  ]),
+  // OSM n5254495076 — Aydın Kanza Parkı (100. Yıl Bulvarı); kültür merkezi ve
+  // sanat galerisi parkın içindedir. OSM'de binanın kendisi kayıtlı değil.
+  Venue('Aydın Kanza Kültür Sanat Merkezi', 'Muratpaşa', 36.89250, 30.69380, ['aydin kanza']),
+  // Antalya Şehir Tiyatroları sahnesi: "Işıklar Caddesi, Karaalioğlu Parkı
+  // girişi". Sahne OSM'de ayrı kayıtlı değil; parkın (OSM w110321827)
+  // merkezi kullanılır, giriş buraya birkaç yüz metre mesafededir.
+  Venue('Yıldız Kenter Sahnesi (Işıklar)', 'Muratpaşa', 36.87966, 30.70608, ['yildiz kenter']),
+  // OSM w742235611 (amenity=theatre) — Muratpaşa Belediyesi
+  Venue('Türkan Şoray Kültür Merkezi', 'Muratpaşa', 36.86960, 30.72482, [
+    'turkan soray', 'tukran soray',
+  ]),
+  // OSM w1187262309 (amenity=conference_centre) — salonları (Tarık Akan, Oda
+  // Sahnesi) aynı binadadır.
+  Venue('Konyaaltı Nazım Hikmet Kültür ve Kongre Merkezi', 'Konyaaltı', 36.88535, 30.65068, [
+    'nazim hikmet fuar', 'nazim hikmet kongre', 'nazim hikmet kultur merkezi', 'nazim hikmet km',
+  ]),
 ];
 
 /// Antalya merkez ilçeleri birbirine bitişik; mekân eşleştirmede tek ilçe sayılır.

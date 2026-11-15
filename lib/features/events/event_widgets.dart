@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 
 import '../../core/utils/formatters.dart';
 import '../../core/widgets/common.dart';
+import '../../core/widgets/horizontal_scroller.dart';
 import '../../data/models/culture_event.dart';
 import '../../data/models/event_category.dart';
 import '../../providers/providers.dart';
@@ -30,11 +31,17 @@ class EventCard extends StatelessWidget {
               child: Stack(
                 fit: StackFit.expand,
                 children: [
-                  Hero(tag: 'event-image-${event.id}', child: EventImage(event: event)),
+                  Hero(
+                    tag: 'event-image-${event.id}',
+                    child: EventImage(event: event),
+                  ),
                   Positioned(
                     top: 12,
                     left: 12,
-                    child: CategoryBadge(category: event.category, onImage: true),
+                    child: CategoryBadge(
+                      category: event.category,
+                      onImage: true,
+                    ),
                   ),
                   Positioned(
                     top: 6,
@@ -55,7 +62,10 @@ class EventCard extends StatelessWidget {
                             icon: Icons.school_rounded,
                           ),
                         if (event.isFree)
-                          InfoPill(label: l10n.free, color: const Color(0xFF2E9D5B)),
+                          InfoPill(
+                            label: l10n.free,
+                            color: const Color(0xFF2E9D5B),
+                          ),
                       ],
                     ),
                   ),
@@ -72,7 +82,9 @@ class EventCard extends StatelessWidget {
                       event.title,
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
-                      style: theme.textTheme.titleMedium?.copyWith(height: 1.25),
+                      style: theme.textTheme.titleMedium?.copyWith(
+                        height: 1.25,
+                      ),
                     ),
                     const Spacer(),
                     _MetaRow(
@@ -211,7 +223,11 @@ class EventListTile extends StatelessWidget {
 
 /// Favori kalp butonu. Giriş yapılmamışsa uyarı gösterir.
 class FavoriteButton extends ConsumerWidget {
-  const FavoriteButton({super.key, required this.eventId, this.onImage = false});
+  const FavoriteButton({
+    super.key,
+    required this.eventId,
+    this.onImage = false,
+  });
 
   final String eventId;
   final bool onImage;
@@ -232,13 +248,15 @@ class FavoriteButton extends ConsumerWidget {
       if (ref.read(currentUserProvider) == null) {
         ScaffoldMessenger.of(context)
           ..hideCurrentSnackBar()
-          ..showSnackBar(SnackBar(
-            content: Text(l10n.loginRequiredFavorite),
-            action: SnackBarAction(
-              label: l10n.signIn,
-              onPressed: () => context.push('/auth'),
+          ..showSnackBar(
+            SnackBar(
+              content: Text(l10n.loginRequiredFavorite),
+              action: SnackBarAction(
+                label: l10n.signIn,
+                onPressed: () => context.push('/auth'),
+              ),
             ),
-          ));
+          );
         return;
       }
       try {
@@ -273,7 +291,9 @@ class ReasonLine extends StatelessWidget {
     return switch (r.type) {
       ReasonType.interest => l10n.reasonInterest(r.category!.label(l10n)),
       ReasonType.favorites => l10n.reasonFavorites,
-      ReasonType.near => l10n.reasonNear(r.km!.toStringAsFixed(r.km! < 10 ? 1 : 0)),
+      ReasonType.near => l10n.reasonNear(
+        r.km!.toStringAsFixed(r.km! < 10 ? 1 : 0),
+      ),
       ReasonType.time => l10n.reasonTime,
       ReasonType.free => l10n.free,
       ReasonType.kids => l10n.reasonKids,
@@ -287,7 +307,11 @@ class ReasonLine extends StatelessWidget {
     final theme = Theme.of(context);
     return Row(
       children: [
-        Icon(Icons.auto_awesome_rounded, size: 15, color: theme.colorScheme.secondary),
+        Icon(
+          Icons.auto_awesome_rounded,
+          size: 15,
+          color: theme.colorScheme.secondary,
+        ),
         const SizedBox(width: 6),
         Expanded(
           child: Text(
@@ -346,8 +370,9 @@ class EventSearchField extends ConsumerStatefulWidget {
 }
 
 class _EventSearchFieldState extends ConsumerState<EventSearchField> {
-  late final _controller =
-      TextEditingController(text: ref.read(filterProvider).query);
+  late final _controller = TextEditingController(
+    text: ref.read(filterProvider).query,
+  );
 
   @override
   void dispose() {
@@ -422,7 +447,8 @@ class FilterBar extends ConsumerWidget {
     final filter = ref.watch(filterProvider);
     final notifier = ref.read(filterProvider.notifier);
     final interests = ref.watch(userInterestsProvider);
-    final showForYou = ref.watch(currentUserProvider) != null &&
+    final showForYou =
+        ref.watch(currentUserProvider) != null &&
         (interests.isNotEmpty || !ref.watch(userPrefsProvider).isEmpty);
     final l10n = context.l10n;
     final scheme = Theme.of(context).colorScheme;
@@ -430,63 +456,69 @@ class FilterBar extends ConsumerWidget {
     final secondaryActive =
         filter.kind != KindFilter.all || filter.date != DateFilter.any;
 
-    final categoryRow = SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      padding: padding,
-      child: Row(
-        children: [
-          if (!showAllInline) ...[
-            Badge(
-              isLabelVisible: secondaryActive,
-              smallSize: 10,
-              child: ActionChip(
-                avatar: const Icon(Icons.tune_rounded, size: 18),
-                label: Text(_dateLabel(context, filter.date)),
+    // Harita üzerinde kenar gölgesi haritayı örtmesin.
+    final fade = onMap ? Colors.transparent : null;
+    final categoryRow = HorizontalScroller(
+      fadeColor: fade,
+      builder: (context, controller) => SingleChildScrollView(
+        controller: controller,
+        scrollDirection: Axis.horizontal,
+        padding: padding,
+        child: Row(
+          children: [
+            if (!showAllInline) ...[
+              Badge(
+                isLabelVisible: secondaryActive,
+                smallSize: 10,
+                child: ActionChip(
+                  avatar: const Icon(Icons.tune_rounded, size: 18),
+                  label: Text(_dateLabel(context, filter.date)),
+                  backgroundColor: chipBg,
+                  onPressed: () => _openSheet(context),
+                ),
+              ),
+              const SizedBox(width: 8),
+            ],
+            if (showForYou) ...[
+              FilterChip(
+                avatar: Icon(
+                  Icons.auto_awesome_rounded,
+                  size: 18,
+                  color: filter.forYou ? scheme.onSecondary : scheme.secondary,
+                ),
+                label: Text(l10n.forYou),
+                selected: filter.forYou,
+                selectedColor: scheme.secondary,
                 backgroundColor: chipBg,
-                onPressed: () => _openSheet(context),
+                labelStyle: TextStyle(
+                  color: filter.forYou ? scheme.onSecondary : null,
+                  fontWeight: FontWeight.w700,
+                ),
+                onSelected: notifier.setForYou,
               ),
-            ),
-            const SizedBox(width: 8),
+              const SizedBox(width: 8),
+            ],
+            for (final c in EventCategory.values) ...[
+              FilterChip(
+                avatar: Icon(
+                  c.icon,
+                  size: 18,
+                  color: filter.categories.contains(c) ? Colors.white : c.color,
+                ),
+                label: Text(c.label(l10n)),
+                selected: filter.categories.contains(c),
+                selectedColor: c.color,
+                backgroundColor: chipBg,
+                labelStyle: TextStyle(
+                  color: filter.categories.contains(c) ? Colors.white : null,
+                  fontWeight: FontWeight.w600,
+                ),
+                onSelected: (_) => notifier.toggleCategory(c),
+              ),
+              const SizedBox(width: 8),
+            ],
           ],
-          if (showForYou) ...[
-            FilterChip(
-              avatar: Icon(
-                Icons.auto_awesome_rounded,
-                size: 18,
-                color: filter.forYou ? scheme.onSecondary : scheme.secondary,
-              ),
-              label: Text(l10n.forYou),
-              selected: filter.forYou,
-              selectedColor: scheme.secondary,
-              backgroundColor: chipBg,
-              labelStyle: TextStyle(
-                color: filter.forYou ? scheme.onSecondary : null,
-                fontWeight: FontWeight.w700,
-              ),
-              onSelected: notifier.setForYou,
-            ),
-            const SizedBox(width: 8),
-          ],
-          for (final c in EventCategory.values) ...[
-            FilterChip(
-              avatar: Icon(
-                c.icon,
-                size: 18,
-                color: filter.categories.contains(c) ? Colors.white : c.color,
-              ),
-              label: Text(c.label(l10n)),
-              selected: filter.categories.contains(c),
-              selectedColor: c.color,
-              backgroundColor: chipBg,
-              labelStyle: TextStyle(
-                color: filter.categories.contains(c) ? Colors.white : null,
-                fontWeight: FontWeight.w600,
-              ),
-              onSelected: (_) => notifier.toggleCategory(c),
-            ),
-            const SizedBox(width: 8),
-          ],
-        ],
+        ),
       ),
     );
 
@@ -497,22 +529,25 @@ class FilterBar extends ConsumerWidget {
       children: [
         categoryRow,
         const SizedBox(height: 10),
-        SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          padding: padding,
-          child: Row(
-            children: [
-              _KindSelector(value: filter.kind, onChanged: notifier.setKind),
-              const SizedBox(width: 12),
-              for (final d in DateFilter.values) ...[
-                ChoiceChip(
-                  label: Text(_dateLabel(context, d)),
-                  selected: filter.date == d,
-                  onSelected: (_) => notifier.setDate(d),
-                ),
-                const SizedBox(width: 8),
+        HorizontalScroller(
+          builder: (context, controller) => SingleChildScrollView(
+            controller: controller,
+            scrollDirection: Axis.horizontal,
+            padding: padding,
+            child: Row(
+              children: [
+                _KindSelector(value: filter.kind, onChanged: notifier.setKind),
+                const SizedBox(width: 12),
+                for (final d in DateFilter.values) ...[
+                  ChoiceChip(
+                    label: Text(_dateLabel(context, d)),
+                    selected: filter.date == d,
+                    onSelected: (_) => notifier.setDate(d),
+                  ),
+                  const SizedBox(width: 8),
+                ],
               ],
-            ],
+            ),
           ),
         ),
       ],
@@ -535,11 +570,20 @@ class FilterBar extends ConsumerWidget {
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(l10n.fieldKind, style: Theme.of(context).textTheme.titleMedium),
+                  Text(
+                    l10n.fieldKind,
+                    style: Theme.of(context).textTheme.titleMedium,
+                  ),
                   const SizedBox(height: 10),
-                  _KindSelector(value: filter.kind, onChanged: notifier.setKind),
+                  _KindSelector(
+                    value: filter.kind,
+                    onChanged: notifier.setKind,
+                  ),
                   const SizedBox(height: 20),
-                  Text(l10n.dateTime, style: Theme.of(context).textTheme.titleMedium),
+                  Text(
+                    l10n.dateTime,
+                    style: Theme.of(context).textTheme.titleMedium,
+                  ),
                   const SizedBox(height: 10),
                   Wrap(
                     spacing: 8,
@@ -563,7 +607,9 @@ class FilterBar extends ConsumerWidget {
                       const Spacer(),
                       FilledButton(
                         onPressed: () => Navigator.pop(context),
-                        style: FilledButton.styleFrom(minimumSize: const Size(120, 48)),
+                        style: FilledButton.styleFrom(
+                          minimumSize: const Size(120, 48),
+                        ),
                         child: Text(l10n.ok),
                       ),
                     ],

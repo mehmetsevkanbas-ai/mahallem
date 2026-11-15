@@ -118,4 +118,44 @@ void main() {
     expect(event['event_name'], 'NOEL PAZARI');
     expect(event['photos'], isEmpty);
   });
+  group('Muratpaşa takvimi', () {
+    test('ücret notu başlıktan ayrılır', () {
+      final a = parseMuratpasaTitle('KONSER “SUAT SUNA-ŞARKILAR ESKİDEN DAHA MI GÜZELDİ?” (ücretli)');
+      expect(a.title, 'KONSER "SUAT SUNA-ŞARKILAR ESKİDEN DAHA MI GÜZELDİ?"');
+      expect(a.isFree, isFalse);
+      final b = parseMuratpasaTitle('Ahmet ÜMİT Söyleşi(Halka Açık Ücretsiz)');
+      expect(b.title, 'Ahmet ÜMİT Söyleşi');
+      expect(b.isFree, isTrue);
+      expect(parseMuratpasaTitle('KARMA RESİM SERGİSİ ').isFree, isNull);
+    });
+
+    test('serbest saat metni UTC aralığına çevrilir', () {
+      final day = DateTime(2026, 11, 21);
+      expect(parseTimeRange('20:00', day), (DateTime.utc(2026, 11, 21, 17), null));
+      expect(parseTimeRange('09.00-17.00', day).$2, DateTime.utc(2026, 11, 21, 14));
+      // İki seans aralık değildir.
+      expect(parseTimeRange('2 SEANS SAAT 13.00 VE 15.00', day), (DateTime.utc(2026, 11, 21, 10), null));
+      // Saat yoksa gündüz etkinliği.
+      expect(parseTimeRange('', day), (DateTime.utc(2026, 11, 21, 7), DateTime.utc(2026, 11, 21, 15)));
+    });
+  });
+
+  test('edebiyat etkinlikleri başka türlerin kelimelerine rağmen edebiyat sayılır', () {
+    expect(inferCategory(title: 'Antalya Lisesi - Şiir Dinletisi'), 'literature');
+    expect(inferCategory(title: '11.Antalya Edebiyat Günleri Sergi Açılış'), 'literature');
+    expect(inferCategory(title: 'Ahmet ÜMİT Söyleşi'), 'literature');
+    expect(inferCategory(title: 'DİLRUBA TSM KOROSU KONSERİ'), 'music');
+  });
+
+  test('tekrar anahtarı tür sözcüklerini yok sayar', () {
+    expect(dedupeKey('KONSER "ZELİŞAH&MUSTAFA"'), dedupeKey('Zelişah & Mustafa Konseri'));
+    expect(dedupeKey('STAND UP "MESUT SÜRE-SİZ HEPİNİZ BEN TEK"'), dedupeKey('Mesut Süre - Siz Hepiniz Ben Tek'));
+    expect(dedupeKey('Hayvan Çiftliği'), 'hayvan ciftligi');
+  });
+
+  test('mekân metninden ilçe bulunur', () {
+    expect(districtFromText('Alanya Kültür Merkezi B Salonu'), 'Alanya');
+    expect(districtFromText('Kumluca Mehmet Akif Ersoy Kültür Merkezi'), 'Kumluca');
+    expect(districtFromText('Dada Tiyatro'), 'Antalya');
+  });
 }

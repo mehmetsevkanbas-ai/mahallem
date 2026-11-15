@@ -40,13 +40,14 @@ jobs:
             dart run tool/sync_events.dart
           fi
 
-      # Konum önbelleği büyüdüyse depoya geri yaz (Nominatim'e tekrar sorulmasın).
+      # Konum ve mekân önbellekleri değiştiyse depoya geri yaz (Nominatim'e ve
+      # mekân sayfalarına her çalıştırmada tekrar sorulmasın).
       - name: Konum önbelleğini kaydet
         run: |
-          if ! git diff --quiet -- tool/sync/geocode_cache.json; then
+          if ! git diff --quiet -- tool/sync/geocode_cache.json tool/sync/venue_cache.json; then
             git config user.name "mahallem-bot"
             git config user.email "mahallem-bot@users.noreply.github.com"
-            git add tool/sync/geocode_cache.json
+            git add tool/sync/geocode_cache.json tool/sync/venue_cache.json
             git commit -m "Konum önbelleğini güncelle [skip ci]"
             git push
           fi

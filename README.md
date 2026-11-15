@@ -43,6 +43,8 @@ Tek Flutter kod tabanından **Web**, **Android** ve **iOS** olarak çalışır.
 | [Antalya Devlet Opera ve Balesi](https://www.operabale.gov.tr/directorates/antalya-opera-ve-balesi-5) | `GET apimain.operabale.gov.tr/v1/web/temsil/mudurluk/listele/5` | temsil tarihleri, sahne, afiş, konu, bilet bağlantısı |
 | [Biletinial](https://biletinial.com/tr-tr/mekan/alanya-kultur-merkezi) (mekân sayfaları) | sayfalardaki schema.org `Event` verisi | yalnızca olgusal bilgiler: ad, tarih/saat, salon, başlangıç fiyatı, bilet bağlantısı |
 | [iTicket](https://iticket.com.tr/etkinlikler) | sitenin kullandığı `api.iticket.com.tr/tr/v6/events?city_id=8` (Antalya) | etkinlik adı, tarih, salon ve koordinatı, kategori, başlangıç fiyatı, bilet bağlantısı |
+| [Bilet Sırası](https://biletsirasi.com/antalya) | sitenin kendi sayfalarını dolduran `/api/events?city=antalya&category=…`; mekân adres/koordinatı mekân sayfasındaki schema.org `EventVenue` verisinden (`tool/sync/venue_cache.json`'da saklanır) | Bubilet, Biletix, Passo vb. platformlardaki Antalya etkinlikleri: ad, seans, salon, başlangıç fiyatı, karşılaştırma sayfası bağlantısı |
+| [Muratpaşa Belediyesi](https://www.muratpasa-bld.gov.tr/etkinlikler) | etkinlik sayfasına gömülü `eventsHubData` JSON'u | ad, gün, saat, yer, ücretli/ücretsiz: Türkan Şoray KM, Kültür Salonu, Aydın Kanza galerisi; konserler, sergiler, Antalya Edebiyat Günleri söyleşileri |
 | [Beyazperde](https://www.beyazperde.com/sinemalar/sinema-T0042/) (sinema) | sinema sayfasını dolduran `/_/showtimes/theater-<kod>/d-<gün>/` JSON'u | vizyondaki filmler, tür, süre, yaş sınırı, önümüzdeki 5 günün seansları |
 | [ATABEM](https://atabem.antalya.bel.tr/kurslar.html) (Büyükşehir) | `kurslar.jsp`, `kursmerkezleri.jsp` | "Kültürel ve Sanatsal" kurslar: resim, kara kalem, piyano, gitar, darbuka, drama, tiyatro… |
 | [ATASEM](https://atasem.antalya.bel.tr/kurslar.html) (Büyükşehir) | `kurslar.jsp`, `kursmerkezleri.jsp` | Sanat ve tasarım, geleneksel Türk sanatları, müzik ve gösteri sanatları, seramik, fotoğraf, el sanatları |
@@ -67,12 +69,20 @@ izin alınması önerilir. Takip edilen sinemalar `CinemaSource.defaultTheaters`
 başka bir salon eklemek için Beyazperde'deki sinema kodunu (ör. `T0049` Manavgat Kültür Merkezi) listeye eklemek yeterlidir.
 Bir film, aynı sinemadaki tüm seanslarıyla tek kayıt olur; seanslar gün gün açıklamada listelenir.
 
+**Bilet Sırası hakkında:** Birden çok bilet platformunu karşılaştıran bu sitenin kullanım koşulları ticari kullanımı
+yasaklıyor; Mahallem ticari olmayan bir öğrenci projesi olduğu için kullanılır, yine de kalıcı kullanım için izin alınması
+önerilir. İstekler arasında 1,5 sn beklenir, mekân sayfaları 30 günde bir yenilenir; site istek sınırı (HTTP 429) bildirirse
+beklenip yeniden denenir. Bir kategori okunamazsa liste eksik sayılır ve Supabase'teki mevcut kayıtlara dokunulmaz.
+Afiş ve tanıtım metni alınmaz. Alanya Açık Hava Tiyatrosu etkinlikleri (Bubilet, Biletix) de bu kaynak üzerinden gelir;
+tiyatro yaz sezonunda (Nisan–Ekim) kullanıldığı için kış aylarında listede kayıt görünmeyebilir.
+
 Araştırılıp **eklenemeyen** kaynaklar:
 - *Halk Eğitim Merkezi (e-Yaygın)*: kurs listesi e-Devlet girişi gerektiriyor.
 - *Antalya Şehir Tiyatroları*: aylık program yalnızca afiş görseli olarak yayınlanıyor; seans tarihleri bilet sitesinde.
 - *Alanya Belediyesi Şehir Tiyatrosu* sitesi bağlantıyı reddediyor.
-- *Bubilet*: otomatik isteklere 403 (erişim engeli) döndürüyor.
-- *Biletix, Passo*: kullanım koşulları otomatik okunamadı, açık bir izin de bulunmadığı için eklenmedi.
+- *Bubilet*: otomatik isteklere bot doğrulaması (Cloudflare) gösteriyor; doğrudan okunmaz, etkinlikleri Bilet Sırası üzerinden gelir.
+- *Biletix, Passo*: doğrudan okunmuyor; etkinlikleri Bilet Sırası üzerinden gelir.
+- *Manavgat Belediyesi*: etkinlik sayfası güncel değil.
 - *Songkick*: Açık Hava Tiyatrosu konserlerini listeliyor, ancak API'si yeni başvurulara kapalı.
 - *ALKÜ (Alanya Alaaddin Keykubat Üniversitesi)*: etkinlik sayfası çoğunlukla akademik duyurular içeriyor ve etkinlik tarihi değil yayın tarihi veriyor.
 

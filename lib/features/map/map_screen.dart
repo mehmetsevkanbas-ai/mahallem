@@ -170,12 +170,17 @@ class _MapScreenState extends ConsumerState<MapScreen> {
                         message: group.length == 1
                             ? group.first.title
                             : '${group.first.venueName ?? ''} · ${group.length}',
-                        child: group.length == 1
-                            ? EventMarker(event: group.first, selected: group.first.id == selectedId)
-                            : StackMarker(
-                                events: group,
-                                selected: group.any((e) => e.id == selectedId),
-                              ),
+                        // Harita kaydırılırken işaretler yalnızca yer değiştirir;
+                        // ayrı katmanda tutulunca gölgeleri her karede yeniden
+                        // çizilmez.
+                        child: RepaintBoundary(
+                          child: group.length == 1
+                              ? EventMarker(event: group.first, selected: group.first.id == selectedId)
+                              : StackMarker(
+                                  events: group,
+                                  selected: group.any((e) => e.id == selectedId),
+                                ),
+                        ),
                       ),
                     ),
                   ),

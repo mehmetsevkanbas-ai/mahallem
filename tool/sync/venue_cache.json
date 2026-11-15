@@ -1,0 +1,570 @@
+{
+  "a-k-m-aspendos-salonu": {
+    "name": "A K M  Aspendos Salonu",
+    "address": "Sakıp Sabancı Bulvarı, Atatürk Kültür Parkı, Antalya Kültür Merkezi, Antalya",
+    "lat": 36.885506,
+    "lng": 30.669705,
+    "fetched": "2026-11-15"
+  },
+  "adana-buyuksehir-belediyesi-konser-ve-tiyatro-salonu": {
+    "name": "Adana Büyükşehir Belediyesi Konser ve Tiyatro Salonu",
+    "address": "Reşatbey, Atatürk Cad. No:1, 01120 Seyhan/Adana",
+    "lat": 36.9931453,
+    "lng": 35.3230628,
+    "fetched": "2026-11-15"
+  },
+  "akra-hotel": {
+    "name": "Akra Hotel",
+    "address": "Antalya Muratpaşa",
+    "lat": 36.8841,
+    "lng": 30.7056,
+    "fetched": "2026-11-15"
+  },
+  "alanya-belediyesi": {
+    "name": "Alanya Belediyesi",
+    "address": "Antalya Alanya",
+    "lat": 36.8841,
+    "lng": 30.7056,
+    "fetched": "2026-11-15"
+  },
+  "alanya-holly-stone": {
+    "name": "Alanya Holly Stone",
+    "address": "Çarşı, Rıhtım Cd. No:26, Alanya/Antalya",
+    "lat": 36.53724056,
+    "lng": 31.99870984,
+    "fetched": "2026-11-15"
+  },
+  "alanya-karadenizliler-dernegi": {
+    "name": "Alanya Karadenizliler Derneği",
+    "address": "Antalya Alanya",
+    "lat": 36.8841,
+    "lng": 30.7056,
+    "fetched": "2026-11-15"
+  },
+  "alanya-kultur-merkezi": {
+    "name": "Alanya Kültür Merkezi",
+    "address": "Saray Mahallesi, İsmet Hilmi Balcı Caddesi No: 4",
+    "lat": 36.543934,
+    "lng": 31.990752,
+    "fetched": "2026-11-15"
+  },
+  "alanya-kultur-merkezi-a-salonu": {
+    "name": "Alanya Kültür Merkezi - A Salonu",
+    "address": "Saray, İsmet Hilmi Balcı Cd. No:4, 07400 Alanya/Antalya",
+    "lat": 36.54451718,
+    "lng": 31.98894239,
+    "fetched": "2026-11-15"
+  },
+  "alanya-kultur-merkezi-b-salonu": {
+    "name": "Alanya Kültür Merkezi B Salonu",
+    "address": "Saray, İsmet Hilmi Balcı Cd. No:4, 07400 Alanya/Antalya",
+    "lat": 36.54460261,
+    "lng": 31.98899338,
+    "fetched": "2026-11-15"
+  },
+  "ananea-kleopatra-beach-hotel": {
+    "name": "ananea Kleopatra Beach Hotel",
+    "address": "ananea Kleopatra Beach Hotel",
+    "lat": 36.543803,
+    "lng": 32.01265201,
+    "fetched": "2026-11-15"
+  },
+  "antalya-akm-aspendos-salonu": {
+    "name": "Antalya AKM Aspendos Salonu",
+    "address": "Meltem, Sakıp Sabancı Blv. No: 7, 07030 Muratpaşa/Antalya",
+    "lat": 37.0122168,
+    "lng": 30.68025317,
+    "fetched": "2026-11-15"
+  },
+  "antalya-aktuel-sahne": {
+    "name": "Antalya Aktüel Sahne",
+    "address": "Fatih Mahallesi,3410 Sokak 07080 Kepez/Antalya, Kepez Kent Ormanı Meşe Kapısı Girişi Kepez /Antalya",
+    "lat": 36.94627705,
+    "lng": 30.64362241,
+    "fetched": "2026-11-15"
+  },
+  "antalya-buyuksehir-belediyesi": {
+    "name": "Antalya Büyükşehir Belediyesi",
+    "address": "Antalya Muratpaşa",
+    "lat": 36.8841,
+    "lng": 30.7056,
+    "fetched": "2026-11-15"
+  },
+  "antalya-gazipasa-belediyesi-kultur-merkezi-salonu": {
+    "name": "Antalya Gazipaşa Belediyesi Kültür Merkezi Salonu",
+    "address": "İstiklal, Mehmet Oğuz Blv. No:3 07900 Gazipaşa ANTALYA",
+    "lat": 36.26593921,
+    "lng": 32.31535729,
+    "fetched": "2026-11-15"
+  },
+  "antalya-hasim-iscan-km-opera-sahnesi": {
+    "name": "Antalya Haşim İşcan K.M. Opera Sahnesi",
+    "address": "Evliya Çelebi Caddesi Haşim İşcan Kültür Merkezi, 07050 Muratpaşa",
+    "lat": 36.899691,
+    "lng": 30.704012,
+    "fetched": "2026-11-15"
+  },
+  "antalya-holly-stone": {
+    "name": "Antalya Holly Stone",
+    "address": "Selçuk, Selçuk Mah, Uzun Çarşı Sk. No:42, 07100 Muratpaşa/Antalya",
+    "lat": 36.88510536,
+    "lng": 30.70456623,
+    "fetched": "2026-11-15"
+  },
+  "antalya-ipekten-sahne": {
+    "name": "Antalya İpekten Sahne",
+    "address": "Pınarbaşı, Pınarbaşı Cd 30/A, 07070 Konyaaltı/Antalya",
+    "lat": 36.88484206,
+    "lng": 30.64922368,
+    "fetched": "2026-11-15"
+  },
+  "antalya-konyaalti-nazim-h-k-m-tarik-akan-salonu": {
+    "name": "Antalya Konyaaltı Nazım H  K M Tarık Akan Salonu",
+    "address": "Pınarbaşı, 734. Sk. No:36, 07070 Konyaaltı/Antalya",
+    "lat": 36.88470875,
+    "lng": 30.65093994,
+    "fetched": "2026-11-15"
+  },
+  "antalya-konyaalti-nazim-hikmet-km-oda-sahnesi": {
+    "name": "Antalya Konyaaltı Nazım Hikmet KM Oda Sahnesi",
+    "address": "Pınarbaşı, 734. Sk. No:36, 07070 Konyaaltı/Antalya",
+    "lat": 36.88470875,
+    "lng": 30.65093994,
+    "fetched": "2026-11-15"
+  },
+  "antalya-konyaalti-nazim-hikmet-kultur-merkezi": {
+    "name": "Antalya Konyaaltı Nazım Hikmet Kültür Merkezi",
+    "address": "Pınarbaşı, 734. Sk. No:36, 07070 Konyaaltı/Antalya",
+    "lat": 36.89257084,
+    "lng": 30.67494991,
+    "fetched": "2026-11-15"
+  },
+  "antalya-manavgat-ibrahim-sozen-genclik-merkezi": {
+    "name": "Antalya Manavgat İbrahim Sözen Gençlik Merkezi",
+    "address": "Bahçelievler, Çetin Emeç Cd. No:27, 07600 Manavgat/Antalya",
+    "lat": 36.78431284,
+    "lng": 31.43574417,
+    "fetched": "2026-11-15"
+  },
+  "antalya-muratpasa-belediyesi-kultur-merkezi": {
+    "name": "Antalya Muratpaşa Belediyesi Kültür Merkezi",
+    "address": "Fener, Tekelioğlu Cd. No:63",
+    "lat": 36.85215,
+    "lng": 30.759718,
+    "fetched": "2026-11-15"
+  },
+  "antalya-muratpasa-belediyesi-kultur-salonu": {
+    "name": "Antalya Muratpaşa Belediyesi Kültür Salonu",
+    "address": "Ermenek, 07230 Muratpaşa/Antalya",
+    "lat": 36.85204986,
+    "lng": 30.75974448,
+    "fetched": "2026-11-15"
+  },
+  "antalya-nazim-hikmet-fuar-ve-kongre-merkezi": {
+    "name": "Antalya Nazım Hikmet Fuar ve Kongre Merkezi",
+    "address": "Pınarbaşı, 734. Sk. No:36, 07070 Konyaaltı/Antalya",
+    "lat": 36.88538002,
+    "lng": 30.65070275,
+    "fetched": "2026-11-15"
+  },
+  "antalya-nazim-hikmet-kongre-ve-fuar-merkezi": {
+    "name": "Antalya Nazım Hikmet Kongre ve Fuar Merkezi",
+    "address": "Pınarbaşı, 734. Sk. No:36, 07070 Bahtılı Köyü Köyü/Konyaaltı/Antalya",
+    "lat": 36.884899,
+    "lng": 30.650553,
+    "fetched": "2026-11-15"
+  },
+  "antalya-nazim-hikmet-kultur-merkezi": {
+    "name": "Antalya Nazım Hikmet Kültür Merkezi",
+    "address": "Pınarbaşı, 734. Sk. No:36, 07070 Konyaaltı/Antalya",
+    "lat": 36.89257084,
+    "lng": 30.67494991,
+    "fetched": "2026-11-15"
+  },
+  "antalya-oyuncak-muzesikaleici-yat-limani": {
+    "name": "Antalya Oyuncak Müzesi/Kaleiçi Yat Limanı",
+    "address": "Selçuk, Yat Limanı Sok No:112, 07000 Muratpaşa/Antalya",
+    "fetched": "2026-11-15"
+  },
+  "antalya-tiyatro-ozgun-sahnesi": {
+    "name": "Antalya Tiyatro Özgün Sahnesi",
+    "address": "Şarampol Caddesi No : 110 Muratpaşa/Antalya",
+    "lat": 36.85654,
+    "lng": 30.75748,
+    "fetched": "2026-11-15"
+  },
+  "antalya-turkan-soray-kultur-merkezi": {
+    "name": "Antalya Türkan Soray Kültür Merkezi",
+    "address": "Yeşilbahçe, Çınarlı Cd. No:7, 07160 Muratpaşa/Antalya",
+    "lat": 36.869219,
+    "lng": 30.724765,
+    "fetched": "2026-11-15"
+  },
+  "antalya-workshop-experience": {
+    "name": "Antalya Workshop Experience",
+    "address": "Balbey Mahallesi, İsmet Paşa Caddesi, Necati Dölen İşhanı No:4 Kat:1 07040 Muratpaşa/Antalya",
+    "lat": 36.88823511,
+    "lng": 30.70754275,
+    "fetched": "2026-11-15"
+  },
+  "ataturk-kultur-merkezi-aspendos-salonu": {
+    "name": "Atatürk Kültür Merkezi - Aspendos Salonu",
+    "address": "Meltem Mah. Sakıp Sabancı Bulv. Atatürk Kültür Parkı İçi AKM No: 7",
+    "lat": 36.885063,
+    "lng": 30.66925,
+    "fetched": "2026-11-15"
+  },
+  "bakus-sahne": {
+    "name": " Baküs Sahne",
+    "address": "Bahçelievler Mah. Pamir CAD Kardeşler Apt No:22/A Muratpaşa Antalya",
+    "lat": 36.886057,
+    "lng": 30.688072,
+    "fetched": "2026-11-15"
+  },
+  "dada-tiyatro": {
+    "name": "Dada Tiyatro",
+    "address": "GENÇLİK MAHALLESİ FEVZİ ÇAKMAK CADDESİ NO:57/A ZEMİN KAT MURTAPAŞA/ANTALYA",
+    "fetched": "2026-11-15"
+  },
+  "delicious-bekir-lara": {
+    "name": "Delicious Bekir Lara",
+    "address": "Çağlayan, Fener Cd. ERDOĞAN İŞ MERKEZİ NO 12 C, 07100 Muratpaşa/Antalya",
+    "lat": 36.8569,
+    "lng": 30.7568,
+    "fetched": "2026-11-15"
+  },
+  "dogu-garaji-buyuk-sahne": {
+    "name": "Doğu Garajı Büyük Sahne",
+    "address": null,
+    "fetched": "2026-11-15"
+  },
+  "dogu-garaji-k-t-m-performans-sahne-2": {
+    "name": "Doğu Garajı K. T. M. - Performans Sahne 2",
+    "address": "Yüksekalan, Ali Çetinkaya Cd. No:35, 07310 Muratpaşa/Antalya",
+    "lat": 36.88913466,
+    "lng": 30.71249035,
+    "fetched": "2026-11-15"
+  },
+  "dogu-garaji-performans-sahne-1": {
+    "name": "Doğu Garajı Performans Sahne 1",
+    "address": "Yüksekalan, Ali Çetinkaya Cd. No:35, 07310 Muratpaşa/Antalya",
+    "lat": 36.88913466,
+    "lng": 30.71249035,
+    "fetched": "2026-11-15"
+  },
+  "dogu-garaji-performans-sahne-2": {
+    "name": "Doğu Garajı Performans Sahne 2",
+    "address": null,
+    "fetched": "2026-11-15"
+  },
+  "gazipasa-belediye-kultur-merkezi": {
+    "name": "Gazipaşa Belediye Kültür Merkezi",
+    "address": "İstiklal, Mehmet Oğuz Blv. No:3 07900 Gazipaşa ANTALYA",
+    "fetched": "2026-11-15"
+  },
+  "hasim-iscan-km-dt-sahnesi": {
+    "name": "Haşim İşcan K.M - DT Sahnesi",
+    "address": "Muratpaşa, Evliya Çelebi Cd., 07010 Muratpaşa/Antalya",
+    "lat": 36.900345,
+    "lng": 30.70319,
+    "fetched": "2026-11-15"
+  },
+  "hasim-iscan-kultur-merkezi": {
+    "name": "Haşim İşcan Kültür Merkezi",
+    "address": "Muratpaşa, Evliya Çelebi Cd., 07010 Muratpaşa/Antalya",
+    "fetched": "2026-11-15"
+  },
+  "highlights-in-antalya-workshops": {
+    "name": "Highlights in Antalya Workshops",
+    "address": "Tahılpazarı mh. 471. sokak Emel-2 İş Merkezi No:3 K:7 BB: 31 İçkapı: 702, 07040 Muratpaşa/Antalya",
+    "lat": 36.89433023,
+    "lng": 30.70404386,
+    "fetched": "2026-11-15"
+  },
+  "hikm-sanat-galerisi": {
+    "name": "H.İ.K.M. SANAT GALERİSİ",
+    "address": "Muratpaşa, Evliya Çelebi Cd., 07010 Muratpaşa/Antalya",
+    "lat": 36.900345,
+    "lng": 30.70319,
+    "fetched": "2026-11-15"
+  },
+  "himmet-ocal-khan-sanat-galerisi": {
+    "name": "Himmet Öcal Khan Sanat Galerisi",
+    "address": "Balbey, Kazım Özalp Cd. No: 10, 07040 Muratpaşa/Antalya",
+    "lat": 36.88902684,
+    "lng": 30.70505942,
+    "fetched": "2026-11-15"
+  },
+  "holly-stone-performance-hall-alanya": {
+    "name": "Holly Stone Performance Hall Alanya",
+    "address": "Çarşı, Rıhtım Cd. No:26, Alanya/Antalya",
+    "lat": 36.53724056,
+    "lng": 31.99870984,
+    "fetched": "2026-11-15"
+  },
+  "holly-stone-performance-hall-antalya": {
+    "name": "Holly Stone Performance Hall Antalya",
+    "address": "Selçuk, Selçuk Mah, Uzun Çarşı Sk. No:42, 07100 Muratpaşa/Antalya",
+    "lat": 36.8841,
+    "lng": 30.7056,
+    "fetched": "2026-11-15"
+  },
+  "jane-sandanski-sports-center": {
+    "name": "Jane Sandanski Sports Center",
+    "address": "Diyarbakır",
+    "lat": 37.9144,
+    "lng": 40.2306,
+    "fetched": "2026-11-15"
+  },
+  "kale-demre-belediyesi": {
+    "name": "Kale (Demre) Belediyesi",
+    "address": "Antalya Kale(Demre)",
+    "lat": 36.8841,
+    "lng": 30.7056,
+    "fetched": "2026-11-15"
+  },
+  "kemer-belediyesi-kultur-salonu": {
+    "name": "Kemer Belediyesi Kültür Salonu",
+    "address": null,
+    "lat": 36.5993095,
+    "lng": 30.5685701,
+    "fetched": "2026-11-15"
+  },
+  "kepez-mimar-sinan-kongre-merkezi": {
+    "name": "Kepez Mimar Sinan Kongre Merkezi",
+    "address": "Kanal, Halide Edip Cd. No:3, 07080 Kepez/Antalya,",
+    "lat": 36.91823347,
+    "lng": 30.67557927,
+    "fetched": "2026-11-15"
+  },
+  "kirmizi-kalem-cadir-sahne": {
+    "name": "Kırmızı Kalem Çadır Sahne",
+    "address": "Şirinyalı, 1502. Sk. 3/3, 07160 Muratpaşa/Antalya",
+    "lat": 36.856877,
+    "lng": 30.745451,
+    "fetched": "2026-11-15"
+  },
+  "kirmizi-kalem-sahne": {
+    "name": "Kırmızı Kalem Sahne",
+    "address": "Şirinyalı, 1502. Sk. 3/3, 07160 Muratpaşa/Antalya",
+    "lat": 36.856877,
+    "lng": 30.745451,
+    "fetched": "2026-11-15"
+  },
+  "konyaalti-belediyesi-feslikan-salonu": {
+    "name": "Konyaaltı Belediyesi Feslikan Salonu",
+    "address": "Kuşkavağı, Altınkum, 470. Sk. No:3, 07070 Konyaaltı/Antalya",
+    "lat": 36.86645412,
+    "lng": 30.64034804,
+    "fetched": "2026-11-15"
+  },
+  "konyaalti-belediyesi-nazim-hikmet-fuar-ve-kongre-merkezi": {
+    "name": "Konyaaltı Belediyesi Nazım Hikmet Fuar ve Kongre Merkezi",
+    "address": "Pınarbaşı Mahallesi, 734. Sk. No:36, 07070 KONYAALTI / Antalya",
+    "lat": 36.884745,
+    "lng": 30.650574,
+    "fetched": "2026-11-15"
+  },
+  "konyaalti-belediyesi-nazim-hikmet-kongre-ve-fuar-merkezi-antalya": {
+    "name": "Konyaaltı Belediyesi Nazım Hikmet Kongre ve Fuar Merkezi - Antalya",
+    "address": "Pınarbaşı Mahallesi, 734. Sk. No:36, 07070",
+    "lat": 36.88493,
+    "lng": 30.650543,
+    "fetched": "2026-11-15"
+  },
+  "konyaalti-nazim-hikmet-km-tarik-akan-salonu": {
+    "name": "Konyaaltı Nazım Hikmet KM Tarık Akan Salonu",
+    "address": "Pınarbaşı, 734. Sk. No:36, 07070 Konyaaltı/Antalya",
+    "lat": 36.89257084,
+    "lng": 30.67494991,
+    "fetched": "2026-11-15"
+  },
+  "konyaalti-nazim-hikmet-kultur-merkezi": {
+    "name": "Konyaaltı Nazım Hikmet Kültür Merkezi",
+    "address": "Pınarbaşı, 734. Sk. No:36, 07070 Konyaaltı/Antalya",
+    "lat": 36.89257084,
+    "lng": 30.67494991,
+    "fetched": "2026-11-15"
+  },
+  "kumluca-mehmet-akif-ersoy-kultur-merkezi": {
+    "name": "Kumluca Mehmet Akif Ersoy Kültür Merkezi",
+    "address": "Bağlık, Kiremithane Sk. No:10, 07350 Kumluca/Antalya",
+    "fetched": "2026-11-15"
+  },
+  "mall-of-antalya-buyuk-salon": {
+    "name": "Mall Of Antalya Büyük Salon",
+    "address": "Altınova Sinan Mahallesi, Serik Cd. 309-91, 07170 Kepez/Antalya",
+    "lat": 36.92183809,
+    "lng": 30.78485935,
+    "fetched": "2026-11-15"
+  },
+  "mall-of-antalya-gosteri-merkezi-buyuk-salon": {
+    "name": "Mall of Antalya Gösteri Merkezi Büyük Salon",
+    "address": "Altınova Sinan Mahallesi, Serik Cd. 309-91, 07170 KEPEZ / Antalya",
+    "lat": 36.92255167,
+    "lng": 30.78504757,
+    "fetched": "2026-11-15"
+  },
+  "mall-of-antalya-gosteri-merkezi-moa-sahne": {
+    "name": "Mall Of Antalya Gösteri Merkezi - Moa Sahne",
+    "address": "Altınova Sinan, Mahallesi, Serik Cd. No:309 D:91, 07170 Kepez/Antalya",
+    "lat": 36.92173411,
+    "lng": 30.78478649,
+    "fetched": "2026-11-15"
+  },
+  "mall-of-antalya-kucuk-salon": {
+    "name": "Mall of Antalya Küçük Salon",
+    "address": "Altınova Sinan Mahallesi, Serik Cd. 309-91, 07170 Kepez/Antalya",
+    "lat": 36.92183809,
+    "lng": 30.78485935,
+    "fetched": "2026-11-15"
+  },
+  "manavgat-ataturk-kultur-merkezi": {
+    "name": "Manavgat Atatürk Kültür Merkezi",
+    "address": "Y. Pazarcı, 07600 Manavgat/Antalya",
+    "lat": 36.79002911,
+    "lng": 31.45402638,
+    "fetched": "2026-11-15"
+  },
+  "muratpasa-belediyesi-kultur-salonu": {
+    "name": "Muratpaşa Belediyesi Kültür Salonu",
+    "address": "Fener, Muratpaşa Belediyesi Otoparkı, Muratpaşa/Antalya, Türkiye",
+    "lat": 36.8519776,
+    "lng": 30.7585822,
+    "fetched": "2026-11-15"
+  },
+  "nazim-hikmet-fuar-ve-kongre-merkezi": {
+    "name": "Nazım Hikmet Fuar ve Kongre Merkezi",
+    "address": "Konyaaltı Bld. Nazım Hikmet Fuar ve Kongre Merkezi",
+    "lat": 36.837532,
+    "lng": 30.4818446,
+    "fetched": "2026-11-15"
+  },
+  "ozgun-sahne": {
+    "name": "Özgün Sahne",
+    "address": "<span>Muratpaşa Mah. Şarampol Cad. Gürtaş Hotel Gurtas Hotel No: 110</span>",
+    "lat": 36.89505,
+    "lng": 30.700588,
+    "fetched": "2026-11-15"
+  },
+  "panda-sahne": {
+    "name": "Panda Sahne",
+    "address": "Fener, Bülent Ecevit Blv. No:2, 07190 Muratpaşa/Antalya",
+    "lat": 36.85822347,
+    "lng": 30.74720238,
+    "fetched": "2026-11-15"
+  },
+  "rockbull": {
+    "name": "Rockbull",
+    "address": "Selçuk mah. İskele cad. No40 tophane çay bahçesi altı Kaleiçi/Antalya",
+    "fetched": "2026-11-15"
+  },
+  "rockbull-cafe-bar": {
+    "name": "Rockbull Cafe Bar",
+    "address": "Selçuk mah. İskele cad. No40 tophane çay bahçesi altı Kaleiçi/Antalya",
+    "fetched": "2026-11-15"
+  },
+  "rockbull-performance-hall": {
+    "name": "Rockbull Performance Hall ",
+    "address": "Selçuk mahallesi Karadayı sokak, Kaleiçi No:04,Muratpaşa Antalya, Turkey",
+    "lat": 36.8858011,
+    "lng": 30.70434687,
+    "fetched": "2026-11-15"
+  },
+  "sandland-antalya": {
+    "name": "Sandland Antalya",
+    "address": "GÜZELOBA MAH. LARA CAD. LARA BİRLİK NO:208/1 MURATPAŞA ANTALYA",
+    "lat": 36.8487885,
+    "lng": 30.8133642,
+    "fetched": "2026-11-15"
+  },
+  "selda-bagcan-butik-sahne": {
+    "name": "Selda Bağcan Butik Sahne",
+    "address": "Konuksever, Hacı Bektaş Veli Sk. No:5 07010",
+    "lat": 36.8841,
+    "lng": 30.7056,
+    "fetched": "2026-11-15"
+  },
+  "selfie-park-antalya": {
+    "name": "Selfie Park Antalya",
+    "address": "Fener Mah. 1964 Sok. Akanay Apt, No:37/A",
+    "lat": 36.848946,
+    "lng": 30.760843,
+    "fetched": "2026-11-15"
+  },
+  "simurg-cafe-kaleici": {
+    "name": "Simurg Cafe Kaleiçi",
+    "address": "Selçuk, Tabakhane Sk., 07100 Muratpaşa/Antalya",
+    "lat": 36.886031,
+    "lng": 30.704603,
+    "fetched": "2026-11-15"
+  },
+  "the-251-soul": {
+    "name": "The 251 Soul",
+    "address": "Şirinyalı Mah. Lara Cad. No:24",
+    "lat": 36.86425,
+    "lng": 30.726152,
+    "fetched": "2026-11-15"
+  },
+  "the-bar": {
+    "name": "The Bar",
+    "address": "Tuzcular mahallesi, Karanlık Sokak, No:14",
+    "lat": 36.884865,
+    "lng": 30.70612,
+    "fetched": "2026-11-15"
+  },
+  "the-bar-kaleici": {
+    "name": "The Bar Kaleiçi",
+    "address": "Tuzcular Mh. Paşa Cami Sk. No:34, Antalya, Turkey 07100",
+    "lat": 36.88491351,
+    "lng": 30.70597351,
+    "fetched": "2026-11-15"
+  },
+  "the-sponge-performance-hall": {
+    "name": "The Sponge Performance Hall",
+    "address": "Kuşkavağı mh. Akdeniz blv. No:158",
+    "lat": 36.865593,
+    "lng": 30.643194,
+    "fetched": "2026-11-15"
+  },
+  "tiyatro-ada-sahnesi": {
+    "name": "Tiyatro ADA Sahnesi",
+    "address": "Özgürlük Mahallesi 2658. Sk. No:36 Çağlayan Lisesi Arkası 07025 Dokuma/Kepez/Antalya",
+    "lat": 36.913974,
+    "lng": 30.682533,
+    "fetched": "2026-11-15"
+  },
+  "tiyatro-ozgun-sahnesi": {
+    "name": "Tiyatro Özgün Sahnesi",
+    "address": "Muratpaşa, Şarampol Cd No:110, 07040 Muratpaşa/Antalya",
+    "lat": 36.89505044,
+    "lng": 30.70062103,
+    "fetched": "2026-11-15"
+  },
+  "turkan-soray-kultur-merkezi": {
+    "name": "Türkan Şoray Kültür Merkezi",
+    "address": "Yeşilbahçe, Çınarlı Cd. No:7, 07160 Muratpaşa/Antalya",
+    "lat": 36.869219,
+    "lng": 30.724765,
+    "fetched": "2026-11-15"
+  },
+  "turkan-soray-kultur-merkezi-antalya": {
+    "name": "Türkan Şoray Kültür Merkezi - Antalya",
+    "address": "Yeşilbahçe, 1455. Sk. No:8, 07160 Muratpaşa/Antalya",
+    "lat": 36.8917,
+    "lng": 30.7223,
+    "fetched": "2026-11-15"
+  },
+  "yaz-dukkan-coffeeshop": {
+    "name": "Yaz Dükkan Coffeeshop",
+    "address": "Yaz Dükkan Coffeeshop",
+    "lat": 36.8841,
+    "lng": 30.7056,
+    "fetched": "2026-11-15"
+  },
+  "yildiz-kenter-sahnesi-isiklar": {
+    "name": "Yıldız Kenter Sahnesi - Işıklar",
+    "address": null,
+    "fetched": "2026-11-15"
+  }
+}

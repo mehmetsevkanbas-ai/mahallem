@@ -18,6 +18,21 @@ String searchKey(String s) => trLower(s)
     .replaceAll(RegExp(r'[^a-z0-9]+'), ' ')
     .trim();
 
+/// Kaynaklar arası tekrarları bulmak için başlık anahtarı: tür sözcükleri
+/// ("KONSER", "Konseri", "Stand Up"...) atılır; böylece belediyenin
+/// `KONSER "ZELİŞAH&MUSTAFA"` kaydı ile bilet sitesinin "Zelişah & Mustafa
+/// Konseri" kaydı aynı anahtarı alır.
+String dedupeKey(String title) => searchKey(title)
+    .split(' ')
+    .where((w) => w.isNotEmpty && !_genericWords.contains(w))
+    .join(' ');
+
+const _genericWords = {
+  'konser', 'konseri', 'konserleri', 'tiyatro', 'tiyatrosu', 'oyunu', 'cocuk',
+  'stand', 'up', 'standup', 'muzikal', 'muzikali', 'gosteri', 'gosterisi',
+  'show', 'live', 'canli', 'performans', 'gala', 'ozel', 'ile',
+};
+
 const _keepUpper = {
   'TFF', 'TCG', 'AKM', 'ALKÜ', 'DOB', 'TRT', 'ABD', 'AB', 'UNESCO', 'DJ',
   'TÜBİTAK', 'MEB', 'KTB', 'ATABEM', 'AVM',

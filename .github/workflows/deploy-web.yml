@@ -46,8 +46,11 @@ jobs:
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_PUBLISHABLE_KEY: ${{ secrets.SUPABASE_PUBLISHABLE_KEY }}
+        # --wasm: Chrome/Edge gibi destekleyen tarayıcılarda WebAssembly (skwasm)
+        # sürümü yüklenir, harita ve listeler daha akıcı çizilir; desteklemeyen
+        # tarayıcılar otomatik olarak JavaScript sürümüne döner.
         run: |
-          flutter build web --release \
+          flutter build web --release --wasm \
             --base-href "/${{ github.event.repository.name }}/" \
             --dart-define=SUPABASE_URL="$SUPABASE_URL" \
             --dart-define=SUPABASE_PUBLISHABLE_KEY="$SUPABASE_PUBLISHABLE_KEY"

@@ -87,6 +87,8 @@ class CultureEvent {
         'iticket' => 'iTicket',
         'beyazperde' => 'Beyazperde',
         'atasem' => 'ATASEM · Antalya Büyükşehir Belediyesi',
+        'muratpasa' => 'Muratpaşa Belediyesi',
+        'biletsirasi' => 'Bilet Sırası',
         null => null,
         _ => source,
       };

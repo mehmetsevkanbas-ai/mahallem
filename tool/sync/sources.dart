@@ -1075,6 +1075,326 @@ class ITicketSource {
       };
 }
 
+// ---------------------------------------------------------------------------
+// Bilet Sırası — https://biletsirasi.com/antalya
+// Bubilet, Biletix, Passo vb. platformlardaki etkinlikleri tek listede toplayan
+// karşılaştırma sitesi. Sitenin kendi sayfalarını dolduran herkese açık
+// `/api/events?city=antalya&category=<kategori>` JSON servisi kullanılır.
+// Mekân adresi ve koordinatı mekân sayfasındaki schema.org verisinden okunur
+// ve `venue_cache.json` dosyasında saklanır (her çalıştırmada tekrar istenmez).
+// ---------------------------------------------------------------------------
+
+class BiletSirasiSource {
+  BiletSirasiSource(
+    this.client, {
+    required this.cacheFile,
+    this.city = 'antalya',
+    this.categories = defaultCategories,
+    this.maxPages = 12,
+  });
+
+  final http.Client client;
+  final File cacheFile;
+  final String city;
+  final List<String> categories;
+  final int maxPages;
+  static const name = 'biletsirasi';
+  static const _base = 'https://biletsirasi.com';
+
+  /// Tüm kategoriler eksiksiz okunduysa true. Eksik okunan liste Supabase'e
+  /// yazılmaz; yoksa okunamayan kategorideki kayıtlar silinirdi.
+  bool complete = true;
+
+  /// Kültür-sanat kategorileri (sinema Beyazperde'den, spor ve parti hiç alınmaz).
+  static const defaultCategories = [
+    'tiyatro', 'muzikal', 'stand-up', 'konser', 'opera', 'festival', 'sergi',
+    'gosteri', 'atolye', 'cocuk', 'egitim', 'konferans', 'diger',
+  ];
+
+  Future<List<RawEvent>> fetch() async {
+    final cache = _loadCache();
+    final events = <RawEvent>[];
+    final seen = <String>{};
+    var okCategories = 0;
+    complete = true;
+    for (final category in categories) {
+      var categoryOk = true;
+      for (var page = 1; page <= maxPages; page++) {
+        final uri = Uri.parse('$_base/api/events?page=$page&city=$city&category=$category');
+        final res = await _get(uri, accept: 'application/json');
+        if (res == null) {
+          stderr.writeln('UYARI: Bilet Sırası "$category" kategorisi okunamadı');
+          categoryOk = false;
+          break;
+        }
+        final body = jsonDecode(utf8.decode(res.bodyBytes)) as Map<String, dynamic>;
+        final list = (body['events'] as Map?)?.cast<String, dynamic>() ?? const {};
+        for (final e in ((list['data'] as List?) ?? const []).cast<Map<String, dynamic>>()) {
+          final title = '${e['title'] ?? ''}'.trim();
+          final slug = '${e['slug'] ?? ''}';
+          final cat = ((e['category'] as Map?)?['slug'] as String?) ?? category;
+          if (title.isEmpty || slug.isEmpty) continue;
+          for (final s in ((e['sessions'] as List?) ?? const []).cast<Map<String, dynamic>>()) {
+            final start = _parseIstanbul('${s['date'] ?? ''}');
+            final venueMap = (s['venue'] as Map?)?.cast<String, dynamic>();
+            final id = '${e['id']}-${s['id']}';
+            if (start == null || venueMap == null || !seen.add(id)) continue;
+            final venueSlug = '${venueMap['slug'] ?? ''}';
+            final info = venueSlug.isEmpty ? null : await _venue(venueSlug, cache);
+            final venueName = '${venueMap['name'] ?? ''}'.trim();
+            final address = info?['address'] as String?;
+            final lat = (info?['lat'] as num?)?.toDouble();
+            final lng = (info?['lng'] as num?)?.toDouble();
+            if (!_inAntalya(lat, lng, '$venueName ${address ?? ''}')) continue;
+            final price = num.tryParse('${s['price'] ?? e['minPrice'] ?? ''}');
+            final url = '$_base/$cat/$slug';
+            events.add(RawEvent(
+              source: name,
+              sourceId: id,
+              sourceUrl: url,
+              title: title,
+              start: start,
+              description: 'Bilet seçenekleri ve fiyat karşılaştırması için Bilet Sırası sayfasına bakın.',
+              tags: [_tag(cat)],
+              venue: venueName.isEmpty ? null : venueName,
+              address: address,
+              lat: lat,
+              lng: lng,
+              price: price == null || price <= 0 ? null : "₺${price.round()}'den başlayan",
+              organizer: 'Bilet Sırası',
+              contact: url,
+              town: lat != null && lng != null
+                  ? nearestDistrict(lat, lng)
+                  : districtFromText('$venueName ${address ?? ''}'),
+              defaultCategory: _default(cat),
+            ));
+          }
+        }
+        if (list['next_page_url'] == null) break;
+        await Future<void>.delayed(const Duration(milliseconds: 1500));
+      }
+      if (categoryOk) {
+        okCategories++;
+      } else {
+        complete = false;
+      }
+      await Future<void>.delayed(const Duration(milliseconds: 1500));
+    }
+    _saveCache(cache);
+    if (okCategories == 0) throw StateError('Bilet Sırası: hiçbir kategori okunamadı');
+    return events;
+  }
+
+  /// İstek sınırına (HTTP 429) takılırsa bekleyip en fazla iki kez yeniden dener.
+  Future<http.Response?> _get(Uri uri, {String? accept}) async {
+    for (var attempt = 0; attempt < 3; attempt++) {
+      final res = await client.get(uri, headers: {..._headers, 'Accept': ?accept});
+      if (res.statusCode == 200) return res;
+      if (res.statusCode != 429 && res.statusCode < 500) return null;
+      final wait = int.tryParse(res.headers['retry-after'] ?? '') ?? 20 * (attempt + 1);
+      await Future<void>.delayed(Duration(seconds: wait.clamp(5, 90)));
+    }
+    return null;
+  }
+
+  /// Mekân sayfasındaki schema.org `EventVenue` verisi (adres ve koordinat).
+  Future<Map<String, dynamic>?> _venue(String slug, Map<String, dynamic> cache) async {
+    final hit = (cache[slug] as Map?)?.cast<String, dynamic>();
+    final fetched = DateTime.tryParse('${hit?['fetched'] ?? ''}');
+    if (hit != null && fetched != null && DateTime.now().difference(fetched).inDays < 30) return hit;
+    try {
+      final res = await _get(Uri.parse('$_base/mekan/$slug'));
+      await Future<void>.delayed(const Duration(milliseconds: 1200));
+      if (res == null) return hit;
+      final body = utf8.decode(res.bodyBytes);
+      for (final m in RegExp(r'<script type="application/ld\+json">(.*?)</script>', dotAll: true).allMatches(body)) {
+        final Object? ld;
+        try {
+          ld = jsonDecode(m.group(1)!);
+        } catch (_) {
+          continue;
+        }
+        if (ld is! Map || ld['@type'] != 'EventVenue') continue;
+        final geo = (ld['geo'] as Map?)?.cast<String, dynamic>();
+        final lat = num.tryParse('${geo?['latitude'] ?? ''}');
+        final lng = num.tryParse('${geo?['longitude'] ?? ''}');
+        // Bazı mekânların adres alanına birden çok sahnenin adresi "|" ile
+        // yazılmış; bu durumda adres güvenilmez sayılır.
+        final rawAddress = '${(ld['address'] as Map?)?['streetAddress'] ?? ''}';
+        final info = <String, dynamic>{
+          'name': ld['name'],
+          'address': rawAddress.contains('|')
+              ? null
+              : _nonEmpty(rawAddress.replaceAll(RegExp(r'\s+'), ' ')),
+          if (lat != null && lng != null && lat.abs() > 1) 'lat': lat,
+          if (lat != null && lng != null && lat.abs() > 1) 'lng': lng,
+          'fetched': DateTime.now().toUtc().toIso8601String().substring(0, 10),
+        };
+        cache[slug] = info;
+        return info;
+      }
+    } catch (_) {
+      // Mekân sayfası okunamazsa etkinlik yalnızca mekân adıyla konumlanır.
+    }
+    return hit;
+  }
+
+  Map<String, dynamic> _loadCache() {
+    try {
+      return (jsonDecode(cacheFile.readAsStringSync()) as Map).cast<String, dynamic>();
+    } catch (_) {
+      return {};
+    }
+  }
+
+  void _saveCache(Map<String, dynamic> cache) {
+    final sorted = Map.fromEntries(cache.entries.toList()..sort((a, b) => a.key.compareTo(b.key)));
+    cacheFile.writeAsStringSync('${const JsonEncoder.withIndent('  ').convert(sorted)}\n');
+  }
+
+  /// Antalya ili dışındaki (ör. turne listesine karışmış) mekânları eler.
+  static bool _inAntalya(double? lat, double? lng, String text) {
+    if (lat != null && lng != null) {
+      return lat > 35.9 && lat < 37.6 && lng > 29.2 && lng < 32.8;
+    }
+    final key = ' ${searchKey(text)} ';
+    const others = ['adana', 'istanbul', 'ankara', 'izmir', 'mersin', 'konya', 'isparta', 'burdur', 'mugla'];
+    return !others.any((c) => key.contains(' $c'));
+  }
+
+  static String _tag(String slug) => switch (slug) {
+        'konser' || 'opera' => 'Konser',
+        'tiyatro' || 'muzikal' || 'stand-up' || 'cocuk' => 'Tiyatro',
+        'festival' => 'Festival',
+        'sergi' => 'Sergi',
+        'atolye' || 'egitim' => 'Atölye',
+        _ => slug,
+      };
+
+  static String? _default(String slug) => switch (slug) {
+        'konser' || 'opera' => 'music',
+        'tiyatro' || 'muzikal' || 'stand-up' || 'cocuk' || 'gosteri' => 'theatre',
+        'festival' => 'festival',
+        'sergi' => 'art',
+        'atolye' || 'egitim' => 'workshop',
+        _ => null, // konferans, diğer: yalnızca başlıktan kategori çıkarsa alınır
+      };
+}
+
+// ---------------------------------------------------------------------------
+// Muratpaşa Belediyesi — https://www.muratpasa-bld.gov.tr/etkinlikler
+// Etkinlik takvimi sayfası tüm kayıtları `<script id=eventsHubData>` içinde
+// JSON olarak taşır: {id, title, date, place, time}. Ücretsiz konserler,
+// sergiler ve Antalya Edebiyat Günleri söyleşileri buradan gelir.
+// ---------------------------------------------------------------------------
+
+class MuratpasaSource {
+  MuratpasaSource(this.client);
+
+  final http.Client client;
+  static const name = 'muratpasa';
+  static const _url = 'https://www.muratpasa-bld.gov.tr/etkinlikler';
+
+  Future<List<RawEvent>> fetch({required DateTime from, required DateTime to}) async {
+    final uri = Uri.parse(_url);
+    final res = await client.get(uri, headers: _headers);
+    _check(res, uri);
+    final body = utf8.decode(res.bodyBytes);
+    final m = RegExp(r'id=["]?eventsHubData["]?>(.*?)</script>', dotAll: true).firstMatch(body);
+    if (m == null) throw StateError('Muratpaşa: etkinlik verisi bulunamadı');
+    final rows = (jsonDecode(m.group(1)!) as List).cast<Map<String, dynamic>>();
+    final events = <RawEvent>[];
+    for (final r in rows) {
+      final date = DateTime.tryParse('${r['date'] ?? ''}');
+      if (date == null || date.isBefore(from) || date.isAfter(to)) continue;
+      final parsed = parseMuratpasaTitle('${r['title'] ?? ''}');
+      if (parsed.title.length < 3) continue;
+      final (start, end) = parseTimeRange('${r['time'] ?? ''}', date);
+      final place = _nonEmpty('${r['place'] ?? ''}'.replaceAll(RegExp(r'\s+'), ' '));
+      events.add(RawEvent(
+        source: name,
+        sourceId: '${r['id']}',
+        sourceUrl: _url,
+        title: parsed.title,
+        start: start,
+        end: end,
+        description: [
+          if ('${r['time'] ?? ''}'.trim().isNotEmpty) 'Saat: ${'${r['time']}'.trim()}',
+          'Muratpaşa Belediyesi etkinlik takviminden alınmıştır.',
+        ].join('\n'),
+        venue: place,
+        isFree: parsed.isFree,
+        organizer: 'Muratpaşa Belediyesi',
+        town: 'Muratpaşa',
+      ));
+    }
+    return events;
+  }
+}
+
+/// "KONSER “X” (ücretli)" → başlık + ücret bilgisi. Başlıktaki tür önekleri
+/// (KONSER, STAND UP...) kategori çıkarımı için korunur.
+({String title, bool? isFree}) parseMuratpasaTitle(String raw) {
+  var title = raw.trim();
+  bool? isFree;
+  final paren = RegExp(r'\(([^)]*)\)\s*$').firstMatch(title);
+  if (paren != null) {
+    final inner = searchKey(paren.group(1)!);
+    if (inner.contains('ucretsiz')) {
+      isFree = true;
+    } else if (inner.contains('ucretli')) {
+      isFree = false;
+    }
+    if (isFree != null || inner.contains('halka acik')) {
+      title = title.substring(0, paren.start).trim();
+    }
+  }
+  title = title.replaceAll(RegExp(r'[“”"]'), '"').replaceAll(RegExp(r'\s+'), ' ').trim();
+  return (title: title, isFree: isFree);
+}
+
+/// "20:00", "20.30", "09.00-17.00", "2 SEANS SAAT 13.00-15.00" gibi serbest
+/// metinden başlangıç/bitiş (UTC). Saat yoksa gündüz etkinliği (10:00–18:00) sayılır.
+(DateTime, DateTime?) parseTimeRange(String text, DateTime day) {
+  final times = RegExp(r'(\d{1,2})[.:](\d{2})')
+      .allMatches(text)
+      .map((m) => (int.parse(m.group(1)!), int.parse(m.group(2)!)))
+      .where((t) => t.$1 < 24 && t.$2 < 60)
+      .toList();
+  DateTime at((int, int) t) =>
+      DateTime.utc(day.year, day.month, day.day, t.$1, t.$2).subtract(const Duration(hours: 3));
+  if (times.isEmpty) return (at((10, 0)), at((18, 0)));
+  final start = at(times.first);
+  // "13.00 VE 15.00" iki seanstır, aralık değil; yalnızca tireli aralıkta bitiş alınır.
+  final isRange = times.length >= 2 && RegExp(r'\d\s*-\s*\d').hasMatch(text);
+  final end = isRange ? at(times[1]) : null;
+  return (start, end != null && end.isAfter(start) ? end : null);
+}
+
+/// "2026-11-15 20:30:00" (Türkiye saati) → UTC.
+DateTime? _parseIstanbul(String v) {
+  final m = RegExp(r'^(\d{4})-(\d{2})-(\d{2})[ T](\d{2}):(\d{2})').firstMatch(v);
+  if (m == null) return null;
+  final p = [for (var i = 1; i <= 5; i++) int.parse(m.group(i)!)];
+  return DateTime.utc(p[0], p[1], p[2], p[3], p[4]).subtract(const Duration(hours: 3));
+}
+
+/// Mekân adı/adresinden ilçe (koordinat yoksa).
+String districtFromText(String text) {
+  final key = ' ${searchKey(text)} ';
+  const districts = {
+    'alanya': 'Alanya', 'mahmutlar': 'Alanya', 'kestel': 'Alanya', 'oba': 'Alanya',
+    'gazipasa': 'Gazipaşa', 'manavgat': 'Manavgat', 'side': 'Manavgat', 'serik': 'Serik',
+    'kemer': 'Kemer', 'kumluca': 'Kumluca', 'finike': 'Finike', 'demre': 'Demre',
+    'kas': 'Kaş', 'elmali': 'Elmalı', 'korkuteli': 'Korkuteli', 'konyaalti': 'Konyaaltı',
+    'muratpasa': 'Muratpaşa', 'kepez': 'Kepez', 'aksu': 'Aksu', 'dosemealti': 'Döşemealtı',
+  };
+  for (final e in districts.entries) {
+    if (key.contains(' ${e.key} ')) return e.value;
+  }
+  return 'Antalya';
+}
+
 /// Koordinattan en yakın ilçe (yalnızca konum doğrulaması için ilçe seçer).
 String nearestDistrict(double lat, double lng) {
   const centers = <String, (double, double)>{

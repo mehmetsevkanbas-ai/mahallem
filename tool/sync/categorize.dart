@@ -25,6 +25,11 @@ String? inferCategory({
       return rule.slug;
     }
   }
+  // Edebiyat etkinlikleri çoğu zaman "dinleti", "sergi" gibi başka türlerin
+  // kelimelerini de taşır ("Şiir Dinletisi", "Edebiyat Günleri Sergisi").
+  if (_hasAny(t, const ['edebiyat', 'siir', 'soylesi', 'imza gunu', 'yazar bulusma', 'yazarla'])) {
+    return 'literature';
+  }
   for (final rule in _rules) {
     if (_hasAny(t, rule.words)) return rule.slug;
   }

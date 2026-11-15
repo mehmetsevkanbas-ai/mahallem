@@ -6,16 +6,30 @@ import '../../core/config/env.dart';
 import '../../data/models/culture_event.dart';
 
 /// Altlık harita. Varsayılan: OpenStreetMap karoları (ücretsiz, API anahtarı gerekmez).
-/// Koyu temada karolar renk filtresiyle koyulaştırılır.
-TileLayer baseTileLayer(BuildContext context) {
+///
+/// Koyu temada karolar renk filtresiyle koyulaştırılır. Filtre her karoya ayrı
+/// ayrı (flutter_map'in `darkModeTileBuilder`'ı gibi) değil, katmanın tamamına
+/// bir kez uygulanır: web'de her filtre ayrı bir çizim katmanı açtığından
+/// karo başına filtre, harita kaydırılırken takılmaya yol açıyordu.
+Widget baseTileLayer(BuildContext context) {
   final isDark = Theme.of(context).brightness == Brightness.dark;
-  return TileLayer(
+  final layer = TileLayer(
     urlTemplate: Env.mapTileUrl,
     userAgentPackageName: 'com.mahallem.mahallem',
     maxZoom: 19,
-    tileBuilder: isDark ? darkModeTileBuilder : null,
   );
+  if (!isDark) return layer;
+  return ColorFiltered(colorFilter: _darkTiles, child: layer);
 }
+
+/// Renkleri tersine çevirip griye yaklaştıran matris (flutter_map'in
+/// `darkModeTileBuilder` filtresiyle aynı).
+const _darkTiles = ColorFilter.matrix(<double>[
+  -0.2126, -0.7152, -0.0722, 0, 255, //
+  -0.2126, -0.7152, -0.0722, 0, 255, //
+  -0.2126, -0.7152, -0.0722, 0, 255, //
+  0, 0, 0, 1, 0, //
+]);
 
 Widget mapAttribution() => RichAttributionWidget(
       alignment: AttributionAlignment.bottomLeft,

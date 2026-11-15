@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../core/widgets/common.dart';
+import '../../core/widgets/horizontal_scroller.dart';
 import '../../providers/providers.dart';
 import 'event_widgets.dart';
 import '../shell/app_shell.dart';
@@ -37,7 +38,10 @@ class EventsScreen extends ConsumerWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const MobileBrandBar(),
-                          Text(l10n.navEvents, style: theme.textTheme.headlineMedium),
+                          Text(
+                            l10n.navEvents,
+                            style: theme.textTheme.headlineMedium,
+                          ),
                           const SizedBox(height: 2),
                           Text(
                             l10n.appTagline,
@@ -72,20 +76,29 @@ class EventsScreen extends ConsumerWidget {
                     SliverToBoxAdapter(
                       child: SizedBox(
                         height: 334,
-                        child: ListView.separated(
-                          scrollDirection: Axis.horizontal,
-                          padding: EdgeInsets.symmetric(horizontal: hPad),
-                          itemCount: recommended.length,
-                          separatorBuilder: (_, _) => const SizedBox(width: 14),
-                          itemBuilder: (context, i) => SizedBox(
-                            width: 290,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                SizedBox(height: 290, child: EventCard(event: recommended[i].event)),
-                                const SizedBox(height: 8),
-                                ReasonLine(reasons: recommended[i].reasons),
-                              ],
+                        child: HorizontalScroller(
+                          builder: (context, controller) => ListView.separated(
+                            controller: controller,
+                            scrollDirection: Axis.horizontal,
+                            padding: EdgeInsets.symmetric(horizontal: hPad),
+                            itemCount: recommended.length,
+                            separatorBuilder: (_, _) =>
+                                const SizedBox(width: 14),
+                            itemBuilder: (context, i) => SizedBox(
+                              width: 290,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  SizedBox(
+                                    height: 290,
+                                    child: EventCard(
+                                      event: recommended[i].event,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 8),
+                                  ReasonLine(reasons: recommended[i].reasons),
+                                ],
+                              ),
                             ),
                           ),
                         ),
@@ -100,7 +113,10 @@ class EventsScreen extends ConsumerWidget {
                     trailing: filter.isActive
                         ? TextButton.icon(
                             onPressed: ref.read(filterProvider.notifier).reset,
-                            icon: const Icon(Icons.filter_alt_off_rounded, size: 18),
+                            icon: const Icon(
+                              Icons.filter_alt_off_rounded,
+                              size: 18,
+                            ),
                             label: Text(l10n.clearFilters),
                           )
                         : null,
@@ -129,7 +145,9 @@ class EventsScreen extends ConsumerWidget {
                             icon: Icons.search_off_rounded,
                             message: l10n.noResults,
                             action: FilledButton.tonal(
-                              onPressed: ref.read(filterProvider.notifier).reset,
+                              onPressed: ref
+                                  .read(filterProvider.notifier)
+                                  .reset,
                               child: Text(l10n.clearFilters),
                             ),
                           ),
@@ -140,13 +158,14 @@ class EventsScreen extends ConsumerWidget {
                           sliver: SliverGrid.builder(
                             gridDelegate:
                                 const SliverGridDelegateWithMaxCrossAxisExtent(
-                              maxCrossAxisExtent: 420,
-                              mainAxisExtent: 290,
-                              mainAxisSpacing: 16,
-                              crossAxisSpacing: 16,
-                            ),
+                                  maxCrossAxisExtent: 420,
+                                  mainAxisExtent: 290,
+                                  mainAxisSpacing: 16,
+                                  crossAxisSpacing: 16,
+                                ),
                             itemCount: events.length,
-                            itemBuilder: (context, i) => EventCard(event: events[i]),
+                            itemBuilder: (context, i) =>
+                                EventCard(event: events[i]),
                           ),
                         ),
                     ],

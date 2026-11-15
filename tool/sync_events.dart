@@ -96,6 +96,30 @@ Future<void> main(List<String> args) async {
       stderr.writeln('UYARI: iTicket okunamadı: $e');
     }
 
+    // --- Muratpaşa Belediyesi (ücretsiz konser, sergi, söyleşi) ---------------
+    var muratpasaEvents = <RawEvent>[];
+    try {
+      final raw = await MuratpasaSource(client).fetch(
+        from: now.subtract(const Duration(days: 2)),
+        to: now.add(const Duration(days: 365)),
+      );
+      muratpasaEvents = _mergeDailyRepeats(raw).where((e) => _isCurrent(e, now)).toList();
+      report['muratpasa_ham'] = raw.length;
+    } catch (e) {
+      stderr.writeln('UYARI: Muratpaşa Belediyesi okunamadı: $e');
+    }
+
+    // --- Bilet Sırası (Bubilet, Biletix vb. platformların ortak listesi) -------
+    var biletSirasiEvents = <RawEvent>[];
+    try {
+      final source = BiletSirasiSource(client, cacheFile: File('tool/sync/venue_cache.json'));
+      final raw = await source.fetch();
+      biletSirasiEvents = raw.where((e) => _isCurrent(e, now)).toList();
+      report[source.complete ? 'biletsirasi_ham' : 'biletsirasi_eksik'] = raw.length;
+    } catch (e) {
+      stderr.writeln('UYARI: Bilet Sırası okunamadı: $e');
+    }
+
     // --- Sinema seansları (Beyazperde) ----------------------------------------
     var cinemaEvents = <RawEvent>[];
     try {
@@ -124,8 +148,12 @@ Future<void> main(List<String> args) async {
       ...alanyaEvents,
       ..._dropDuplicates(antalyaEvents, alanyaEvents),
       ...dobEvents,
-      ..._dropDuplicates(ticketEvents, [...alanyaEvents, ...antalyaEvents, ...dobEvents]),
-      ..._dropDuplicates(iticketEvents, [...alanyaEvents, ...antalyaEvents, ...dobEvents, ...ticketEvents]),
+      ..._dropDuplicates(muratpasaEvents, [...alanyaEvents, ...antalyaEvents, ...dobEvents]),
+      ..._dropDuplicates(ticketEvents, [...alanyaEvents, ...antalyaEvents, ...dobEvents, ...muratpasaEvents]),
+      ..._dropDuplicates(iticketEvents, [...alanyaEvents, ...antalyaEvents, ...dobEvents, ...muratpasaEvents, ...ticketEvents]),
+      ..._dropDuplicates(_mergeSameDay(biletSirasiEvents), [
+        ...alanyaEvents, ...antalyaEvents, ...dobEvents, ...muratpasaEvents, ...ticketEvents, ...iticketEvents,
+      ]),
       ...cinemaEvents,
       ...courses,
     ]) {
@@ -203,6 +231,8 @@ Future<void> main(List<String> args) async {
         {'id': DobSource.name, 'name': 'Antalya Devlet Opera ve Balesi', 'url': 'https://www.operabale.gov.tr/directorates/antalya-opera-ve-balesi-5'},
         {'id': ITicketSource.name, 'name': 'iTicket', 'url': 'https://iticket.com.tr/etkinlikler'},
         {'id': CinemaSource.name, 'name': 'Beyazperde (sinema seansları)', 'url': 'https://www.beyazperde.com/sinemalar/sinema-T0042/'},
+        {'id': MuratpasaSource.name, 'name': 'Muratpaşa Belediyesi', 'url': 'https://www.muratpasa-bld.gov.tr/etkinlikler'},
+        {'id': BiletSirasiSource.name, 'name': 'Bilet Sırası', 'url': 'https://biletsirasi.com/antalya'},
         {'id': BiletinialSource.name, 'name': 'Biletinial', 'url': 'https://biletinial.com/tr-tr/mekan/alanya-kultur-merkezi'},
         {'id': 'atabem', 'name': 'ATABEM (Antalya Büyükşehir Belediyesi)', 'url': 'https://atabem.antalya.bel.tr/kurslar.html'},
         {'id': 'atasem', 'name': 'ATASEM (Antalya Büyükşehir Belediyesi)', 'url': 'https://atasem.antalya.bel.tr/kurslar.html'},
@@ -221,6 +251,8 @@ Future<void> main(List<String> args) async {
         if (report.containsKey('dob_ham')) DobSource.name,
         if (report.containsKey('biletinial_ham')) BiletinialSource.name,
         if (report.containsKey('iticket_ham')) ITicketSource.name,
+        if (report.containsKey('muratpasa_ham')) MuratpasaSource.name,
+        if (report.containsKey('biletsirasi_ham')) BiletSirasiSource.name,
         if (report.containsKey('sinema_film')) CinemaSource.name,
         if (report.containsKey('atabem_kurs')) 'atabem',
         if (report.containsKey('atasem_kurs')) 'atasem',
@@ -260,18 +292,35 @@ List<RawEvent> _mergeDailyRepeats(List<RawEvent> events) {
   return merged;
 }
 
+/// Aynı etkinliğin aynı mekândaki farklı platform kayıtlarını (ör. Bubilet ve
+/// Biletix'teki aynı seans) tek kayda indirir.
+List<RawEvent> _mergeSameDay(List<RawEvent> events) {
+  final byKey = <String, RawEvent>{};
+  for (final e in events) {
+    final t = e.start.add(const Duration(hours: 3));
+    final key = '${searchKey(e.title)}|${searchKey(e.venue ?? '')}|${t.year}-${t.month}-${t.day}';
+    final prev = byKey[key];
+    if (prev == null) {
+      byKey[key] = e;
+    } else {
+      prev.price ??= e.price;
+    }
+  }
+  return byKey.values.toList();
+}
+
 /// Antalya listesinde Alanya'dan zaten gelen etkinlikleri ayıklar,
 /// eksik bilgileri (görsel, açıklama, fiyat) Alanya kaydına aktarır.
 List<RawEvent> _dropDuplicates(List<RawEvent> antalya, List<RawEvent> alanya) {
   final result = <RawEvent>[];
   for (final a in antalya) {
-    final key = searchKey(a.title);
+    final key = dedupeKey(a.title);
     // Kiril/kısa başlıklarda anahtar boş veya çok kısa kalır; boş anahtar her
     // başlığın "içinde" sayılacağı için bu kayıtlar eşleştirmeye girmez.
     final match = key.length < 4
         ? null
         : alanya.where((b) {
-            final bk = searchKey(b.title);
+            final bk = dedupeKey(b.title);
             if (bk.length < 4) return false;
             final sameName = bk == key || bk.contains(key) || key.contains(bk);
             return sameName && (a.start.difference(b.start).inHours.abs() <= 48);

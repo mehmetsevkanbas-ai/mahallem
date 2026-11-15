@@ -458,6 +458,7 @@
    }
   ],
   "alanya atabem kurs merkezi alanya antalya": [],
+  "allesi cebesoy caddesi i mahallesi antalya antalya": [],
   "allesi sarampol caddesi ucgen mahallesi muratpasa antalya": [],
   "altindag el sanatlari kurs merkezi muratpasa antalya": [],
   "altindag mahallesi muratpasa antalya": [
@@ -538,6 +539,7 @@
     }
    }
   ],
+  "antalya oyuncak muzesi kaleici yat limani muratpasa antalya": [],
   "asagi mahallesi ibradi antalya": [],
   "atabem altindag el sanatlari kurs merkezi muratpasa antalya": [],
   "atabem ataturk kurs merkezi muratpasa antalya": [],
@@ -724,6 +726,7 @@
     }
    }
   ],
+  "aydin kanza sanat galerisi muratpasa antalya": [],
   "bulent ecevit bulvari fener mahallesi muratpasa antalya": [
    {
     "lat": "36.8576635",
@@ -863,6 +866,7 @@
     }
    }
   ],
+  "dada tiyatro antalya antalya": [],
   "demre antalya": [
    {
     "lat": "36.2445690",
@@ -1066,6 +1070,48 @@
     }
    }
   ],
+  "fevzi cakmak caddesi genclik mahallesi antalya antalya": [
+   {
+    "lat": "36.8754799",
+    "lon": "30.7088048",
+    "name": "Fevzi Çakmak Caddesi",
+    "category": "highway",
+    "type": "residential",
+    "addresstype": "residential",
+    "address": {
+     "road": "Fevzi Çakmak Caddesi",
+     "suburb": "Gençlik Mahallesi",
+     "city": "Antalya",
+     "town": "Muratpaşa",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07100",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "36.8753878",
+    "lon": "30.7122946",
+    "name": "Fevzi Çakmak Caddesi",
+    "category": "highway",
+    "type": "tertiary",
+    "addresstype": "tertiary",
+    "address": {
+     "road": "Fevzi Çakmak Caddesi",
+     "suburb": "Gençlik Mahallesi",
+     "city": "Antalya",
+     "town": "Muratpaşa",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07100",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
   "finike antalya": [
    {
     "lat": "36.3046148",
@@ -1094,6 +1140,28 @@
     "type": "administrative",
     "addresstype": "town",
     "address": {
+     "town": "Gazipaşa",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07900",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
+  "gazipasa belediye kultur merkezi gazipasa antalya": [
+   {
+    "lat": "36.2692713",
+    "lon": "32.3171063",
+    "name": "Gazipaşa Belediye Kültür Merkezi",
+    "category": "amenity",
+    "type": "concert_hall",
+    "addresstype": "amenity",
+    "address": {
+     "amenity": "Gazipaşa Belediye Kültür Merkezi",
+     "road": "Rasih Kaplan Caddesi",
+     "suburb": "Pazarcı Mahallesi",
      "town": "Gazipaşa",
      "province": "Antalya",
      "ISO3166-2-lvl4": "TR-07",
@@ -1145,6 +1213,29 @@
    }
   ],
   "gundogmus kurs merkezi gundogmus antalya": [],
+  "i mahallesi antalya antalya": [
+   {
+    "lat": "36.7775855",
+    "lon": "31.4139613",
+    "name": "I",
+    "category": "building",
+    "type": "apartments",
+    "addresstype": "building",
+    "address": {
+     "building": "I",
+     "road": "8229. Sokak",
+     "quarter": "Kemer",
+     "suburb": "Aydınevler",
+     "town": "Manavgat",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07600",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
   "ibradi antalya": [
    {
     "lat": "37.0969444",
@@ -1164,6 +1255,49 @@
    }
   ],
   "ibradi kurs merkezi ibradi antalya": [],
+  "iskele caddesi selcuk mahallesi antalya antalya": [
+   {
+    "lat": "36.8855253",
+    "lon": "30.7022744",
+    "name": "İskele Caddesi",
+    "category": "highway",
+    "type": "residential",
+    "addresstype": "residential",
+    "address": {
+     "road": "İskele Caddesi",
+     "suburb": "Selçuk Mahallesi",
+     "city": "Antalya",
+     "town": "Muratpaşa",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07050",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "36.8855150",
+    "lon": "30.7018977",
+    "name": "Antalya Oyuncak Müzesi",
+    "category": "tourism",
+    "type": "museum",
+    "addresstype": "tourism",
+    "address": {
+     "tourism": "Antalya Oyuncak Müzesi",
+     "road": "İskele Caddesi",
+     "suburb": "Selçuk Mahallesi",
+     "city": "Antalya",
+     "town": "Muratpaşa",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07050",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
   "istiklal caddesi aktoprak mahallesi kepez antalya": [
    {
     "lat": "36.9798783",
@@ -1375,6 +1509,62 @@
   ],
   "kepez kurs merkezi kepez antalya": [],
   "kestel mahallesi alanya antalya": [],
+  "kiremithane sokak kumluca antalya": [
+   {
+    "lat": "36.3709809",
+    "lon": "30.2855336",
+    "name": "Kiremithane Sokak",
+    "category": "highway",
+    "type": "tertiary",
+    "addresstype": "tertiary",
+    "address": {
+     "road": "Kiremithane Sokak",
+     "neighbourhood": "Merkez",
+     "town": "Kumluca",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "36.3693307",
+    "lon": "30.2920837",
+    "name": "Kiremithane Sokak",
+    "category": "highway",
+    "type": "tertiary",
+    "addresstype": "tertiary",
+    "address": {
+     "road": "Kiremithane Sokak",
+     "neighbourhood": "Narenciye",
+     "town": "Kumluca",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   },
+   {
+    "lat": "36.3701173",
+    "lon": "30.2910841",
+    "name": "Kiremithane Sokak",
+    "category": "highway",
+    "type": "tertiary",
+    "addresstype": "tertiary",
+    "address": {
+     "road": "Kiremithane Sokak",
+     "neighbourhood": "Eskicami",
+     "town": "Kumluca",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
   "kiremitli mahallesi korkuteli antalya": [
    {
     "lat": "37.0593384",
@@ -1632,6 +1822,7 @@
     }
    }
   ],
+  "muratpasa belediyesi kultur salonu muratpasa antalya": [],
   "mustafa masatli caddesi gokyazi mahallesi demre antalya": [],
   "oba mahallesi alanya antalya": [
    {
@@ -1671,6 +1862,8 @@
     }
    }
   ],
+  "rockbull antalya antalya": [],
+  "rockbull cafe bar antalya antalya": [],
   "sakarya bulvari emek mahallesi kepez antalya": [
    {
     "lat": "36.9187259",
@@ -1796,6 +1989,29 @@
   ],
   "uncali kurs merkezi konyaalti antalya": [],
   "varsak atabem kurs merkezi kepez antalya": [],
+  "yat limani sokak muratpasa antalya": [
+   {
+    "lat": "36.8843625",
+    "lon": "30.7021496",
+    "name": "Antalya Yat Limanı / Old Harbor",
+    "category": "leisure",
+    "type": "marina",
+    "addresstype": "leisure",
+    "address": {
+     "leisure": "Antalya Yat Limanı / Old Harbor",
+     "road": "Tuz Kapısı Sokak",
+     "suburb": "Selçuk Mahallesi",
+     "city": "Antalya",
+     "town": "Muratpaşa",
+     "province": "Antalya",
+     "ISO3166-2-lvl4": "TR-07",
+     "region": "Akdeniz Bölgesi",
+     "postcode": "07050",
+     "country": "Türkiye",
+     "country_code": "tr"
+    }
+   }
+  ],
   "yayla bulvari eski mahallesi finike antalya": [],
   "yeni mahalle kultur merkezi kurs merkezi kepez antalya": [],
   "yeni mahallesi kepez antalya": [
@@ -1920,6 +2136,7 @@
    }
   ],
   "yesilbayir kurs merkezi dosemealti antalya": [],
-  "yesilbayir mahallesi dosemealti antalya": []
+  "yesilbayir mahallesi dosemealti antalya": [],
+  "yildiz kenter sahnesi isiklar antalya antalya": []
  }
 }
