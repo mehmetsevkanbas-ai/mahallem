@@ -75,6 +75,9 @@ yasaklıyor; Mahallem ticari olmayan bir öğrenci projesi olduğu için kullan�
 beklenip yeniden denenir. Bir kategori okunamazsa liste eksik sayılır ve Supabase'teki mevcut kayıtlara dokunulmaz.
 Afiş ve tanıtım metni alınmaz. Alanya Açık Hava Tiyatrosu etkinlikleri (Bubilet, Biletix) de bu kaynak üzerinden gelir;
 tiyatro yaz sezonunda (Nisan–Ekim) kullanıldığı için kış aylarında listede kayıt görünmeyebilir.
+**Bilinen kısıt:** Bilet Sırası, GitHub Actions sunucularından gelen istekleri reddediyor (kişisel bilgisayardan
+çalışıyor). Bu yüzden zamanlanmış senkronizasyonda bu kaynak "okunamadı" uyarısıyla atlanır; Supabase'teki kayıtlarına
+dokunulmaz. Engel aşılmaya çalışılmaz; kalıcı çözüm için siteden izin veya erişim istenmelidir.
 
 Araştırılıp **eklenemeyen** kaynaklar:
 - *Halk Eğitim Merkezi (e-Yaygın)*: kurs listesi e-Devlet girişi gerektiriyor.

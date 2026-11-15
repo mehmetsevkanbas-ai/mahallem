@@ -1105,6 +1105,9 @@ class BiletSirasiSource {
   /// yazılmaz; yoksa okunamayan kategorideki kayıtlar silinirdi.
   bool complete = true;
 
+  /// Son başarısız isteğin HTTP kodu (uyarı mesajında gösterilir).
+  int? _lastStatus;
+
   /// Kültür-sanat kategorileri (sinema Beyazperde'den, spor ve parti hiç alınmaz).
   static const defaultCategories = [
     'tiyatro', 'muzikal', 'stand-up', 'konser', 'opera', 'festival', 'sergi',
@@ -1123,7 +1126,7 @@ class BiletSirasiSource {
         final uri = Uri.parse('$_base/api/events?page=$page&city=$city&category=$category');
         final res = await _get(uri, accept: 'application/json');
         if (res == null) {
-          stderr.writeln('UYARI: Bilet Sırası "$category" kategorisi okunamadı');
+          stderr.writeln('UYARI: Bilet Sırası "$category" kategorisi okunamadı (HTTP $_lastStatus)');
           categoryOk = false;
           break;
         }
@@ -1190,6 +1193,7 @@ class BiletSirasiSource {
     for (var attempt = 0; attempt < 3; attempt++) {
       final res = await client.get(uri, headers: {..._headers, 'Accept': ?accept});
       if (res.statusCode == 200) return res;
+      _lastStatus = res.statusCode;
       if (res.statusCode != 429 && res.statusCode < 500) return null;
       final wait = int.tryParse(res.headers['retry-after'] ?? '') ?? 20 * (attempt + 1);
       await Future<void>.delayed(Duration(seconds: wait.clamp(5, 90)));
